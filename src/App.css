@@ -13,11 +13,12 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header {
   width: 100vw;
-  min-width: 500px;
+  min-width: 300px;
   max-width: 1100px;
   display: flex;
   justify-content: space-between;
@@ -58,17 +59,98 @@ a:visited {
   box-sizing: border-box;
   padding: 0 2vh;
   width: 95%;
-  min-width: 500px;
+  min-width: 300px;
   max-width: 850px;
 }
 
-.Home {
-  /* background-color: red; */
+.title {
+  text-align: center;
+  margin: 5vh 0 10vh 0;
 }
 
-.About {
-  /* background-color: green; */
+/* HOME VIEW */
+
+.Home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.Home a {
+  height: 300px;
+}
+
+.Home .title {
+  margin-bottom: 5vh;
+}
+
+.Home .image-container {
+  height: 280px;
+  width: 280px;
+  background-image: url(./Camino1.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  background-position-x: 50%;
+  background-position-y: 80%;
+  margin: auto;
+  transition: all 200ms linear;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+.image-container .link {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  /* box-shadow: 0 5px 10px 2px black; */
+}
+
+.about-short {
+  text-align: left;
+  line-height: 40px;
+}
+
+.about-short h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about-short p {
+  font-size: 14px;
+}
+
+/* ABOUT VIEW */
+
+.About {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-bottom: 10vh;
+}
+
+.About .paragraph {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.About .paragraph img {
+  height: 160px;
+  margin: 10vh auto;
+  filter: drop-shadow(0px 0px 6px grey)
+}
+
+.About .paragraph p {
+  line-height: 30px;
+  text-align: justify;
+  padding: 0 20px;
+
+}
+
+/* PROJECTS VIEW */
 
 .Projects {
   display: flex;
@@ -79,11 +161,6 @@ a:visited {
 .Projects hr {
   width: 100%;
   margin: 0 0 5vh 0;
-}
-
-.title {
-  text-align: center;
-  margin: 5vh 0 10vh 0;
 }
 
 .project {
@@ -151,6 +228,8 @@ a:visited {
   font-size: 14px;
   font-style: italic;
 }
+
+/* CONTACT VIEW */
 
 .Contact {
   /* background-color: yellow; */

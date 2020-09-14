@@ -8,7 +8,7 @@ const Projects = () => {
     return (
             <div className="Projects view">
                 <div className="title">
-                    <h1>Projects</h1>
+                    <h2>Projects</h2>
                 </div>
 
                 <div className="project">
