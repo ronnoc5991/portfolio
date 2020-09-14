@@ -8,6 +8,7 @@ import Contact from './Contact'
 import Eatstagram from './Eatstagram'
 import Pokemon from './Pokemon'
 import Battleship from './Battleship'
+import Hamburger from './hamburger.png'
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
 
         <header>
           <Link to='/'>
-            <h2>CONNOR STRENG</h2>
+            <h2>CS</h2>
           </Link>
+          <div className="nav-menu">
+            <img src={ Hamburger } alt=""/>
             <ul>
               <li>
                 <Link to='/'>
@@ -41,6 +44,7 @@ function App() {
                 </Link>
               </li>
             </ul>
+          </div>
           </header>
 
           <Switch>

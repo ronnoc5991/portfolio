@@ -28,13 +28,15 @@ function Pokemon() {
                     JavaScript to fetch data form an API.
                 </p>
             </div>
+
             <div className="technology-container">
                 <h3>Built with:</h3>
                 <img src={ ReactImage } title="React" alt=""/>
                 <img src={ HTML } title="HTML" alt=""/>
                 <img src={ CSS } title="CSS" alt=""/>
                 <img src={ API } title="3rd Party API" alt="" id="odd"/>
-            </div>        
+            </div>   
+     
         </div>
     )
 }
