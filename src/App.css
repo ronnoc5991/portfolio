@@ -61,6 +61,10 @@ a:visited {
   width: 95%;
   min-width: 300px;
   max-width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-bottom: 10vh;
 }
 
 .title {
@@ -72,9 +76,6 @@ a:visited {
 
 .Home {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .Home a {
@@ -125,9 +126,6 @@ a:visited {
 /* ABOUT VIEW */
 
 .About {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   padding-bottom: 10vh;
 }
 
@@ -153,9 +151,7 @@ a:visited {
 /* PROJECTS VIEW */
 
 .Projects {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  padding-bottom: 10vh;
 }
 
 .Projects hr {
@@ -229,8 +225,94 @@ a:visited {
   font-style: italic;
 }
 
+.project-detail-image {
+  position: relative;
+}
+
+.project-detail-image .link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-detail-image:hover .link {
+  background-color: rgba(0, 0, 0, .65);
+}
+
+.project-detail-image:hover .project-link {
+  border: 2px solid blue;
+}
+
+.project-detail-image:hover .project-link div {
+  color: white;
+}
+
+.project-link {
+  height: 100px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.project-link div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.project-detail-image img{
+  width: 100%;
+  box-shadow: 0 0 7px 2px black;
+}
+
+.project-background {
+  text-align: center;
+  margin: 5vh auto;
+}
+
+.project-background a {
+  color: blue;
+  font-weight: bold;
+}
+
+.project-background a:visited {
+  color: blue;
+  font-weight: bold;
+}
+
+.technology-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology-container h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.technology-container img {
+  height: 100px;
+}
+
+.technology-container #odd {
+  height: 80px;
+}
+
 /* CONTACT VIEW */
 
 .Contact {
-  /* background-color: yellow; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
