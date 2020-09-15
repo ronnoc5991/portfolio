@@ -85,10 +85,15 @@ function About() {
 
           <div className="arrow-container">
             {
-              previousStepPossible() ?   <div className="arrow arrow-left" onClick={ previousStep } > &lt; </div> : <div></div>
+              previousStepPossible() ?   <div className="arrow arrow-left" onClick={ previousStep } ><i class="fa fa-arrow-circle-left"></i></div> : <div className="arrow"></div>
             }
+            <div className="tracker-container">
+              <div className={`slide-tracker ${slide === 1 ? 'active' : ''}`} onClick={ () => setSlide(1) } ></div>
+              <div className={`slide-tracker ${slide === 2 ? 'active' : ''}`} onClick={ () => setSlide(2) }></div>
+              <div className={`slide-tracker ${slide === 3 ? 'active' : ''}`} onClick={ () => setSlide(3) }></div>
+            </div>
             {
-              nextStepPossible() ? <div className="arrow arrow-right" onClick={ nextStep } > &gt; </div> : <div></div>
+              nextStepPossible() ? <div className="arrow arrow-right" onClick={ nextStep } ><i class="fa fa-arrow-circle-right"></i></div> : <div className="arrow"></div>
             }
           </div>
 
