@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactComponent as Developer } from './developer.svg'
 
 function Home() {
     return (
@@ -17,7 +18,9 @@ function Home() {
             <div className="job">
                 I'm a Front End Developer based in Zeist, NL.
             </div>
-
+            {/* <div className="developer-container"> */}
+                <Developer />
+            {/* </div> */}
         </div>
     )
 }
