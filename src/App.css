@@ -37,7 +37,7 @@ header h2 {
   width: 25px;
   cursor: pointer;
   z-index: 6;
-  transition: all 150ms linear;
+  transition: all 200ms linear;
 }
 
 .open-container:hover {
@@ -187,7 +187,7 @@ a:visited {
 
 .title {
   text-align: center;
-  margin: 5vh 0 10vh 0;
+  margin: 0 0 5vh 0;
 }
 
 /* HOME VIEW */
@@ -226,18 +226,41 @@ a:visited {
 /* ABOUT VIEW */
 
 .About {
-  padding-bottom: 10vh;
+  justify-content: space-around;
+}
+
+.arrow-container {
+  /* position: absolute; */
+  /* border: 1px solid black; */
+  width: 80%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.arrow-left {
+}
+
+.arrow-right {
 }
 
 .About .paragraph {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid black; */
 }
 
 .About .paragraph img {
-  height: 160px;
-  margin: 10vh auto;
+  height: 15vh;
+  margin: 5vh auto;
   filter: drop-shadow(0px 0px 6px grey)
 }
 
@@ -307,15 +330,13 @@ a:visited {
 }
 
 .image-link:hover .link-container {
-  border: 3px solid blue;
+  border: 3px solid rgb(99, 139, 255);
   border-radius: 5px;
   color: white;
 }
 
 .project-image img {
-  /* height: 300px; */
   height: 200px;
-  /* width: 100%; */
 }
 
 .project-title {
@@ -347,7 +368,7 @@ a:visited {
 }
 
 .project-detail-image:hover .project-link {
-  border: 2px solid blue;
+  border: 2px solid rgb(99, 139, 255);
 }
 
 .project-detail-image:hover .project-link div {
@@ -355,8 +376,8 @@ a:visited {
 }
 
 .project-link {
-  height: 25%;
-  width: 50%;
+  height: 50px;
+  width: 200px;
   border-radius: 5px;
 }
 
@@ -381,12 +402,12 @@ a:visited {
 }
 
 .project-background a {
-  color: blue;
+  color: rgb(99, 139, 255);
   font-weight: bold;
 }
 
 .project-background a:visited {
-  color: blue;
+  color: rgb(99, 139, 255);
   font-weight: bold;
 }
 

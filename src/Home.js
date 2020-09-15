@@ -19,7 +19,7 @@ function Home() {
                 I'm a Front End Developer based in Zeist, NL.
             </div>
             {/* <div className="developer-container"> */}
-                <Developer />
+                {/* <Developer /> */}
             {/* </div> */}
         </div>
     )
