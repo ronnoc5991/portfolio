@@ -13,9 +13,11 @@ const [menuOpen, setMenuOpen] = useState(false);
         <>
             <Router>
                 <header>
-                    <Link to='/'>
-                        <h2>CS</h2>
-                    </Link>
+                    <a href="#top">
+                        <div className="logo">
+                            <h2>CS</h2>
+                        </div>
+                    </a>
                     <div className={`bar-container ${menuOpen ? 'open-container' : ''}`} onClick={ toggleMenu }>
                     <div className={`bar bar-1 ${menuOpen ? 'open-1' : 'closed-1'}`}></div>
                     <div className={`bar bar-2 ${menuOpen ? 'open-2' : 'closed-2'}`}></div>
@@ -25,7 +27,7 @@ const [menuOpen, setMenuOpen] = useState(false);
                     <div className={`pop-up-menu ${ menuOpen ? 'open' : 'closed' }`}>
                         <ul>
                         <li>
-                            <a href="#home" onClick={ toggleMenu }>
+                            <a href="#top" onClick={ toggleMenu }>
                                 <p>Home</p>
                                 <div className="underline"></div>
                             </a>

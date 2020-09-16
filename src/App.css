@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 header {
@@ -26,25 +26,29 @@ header {
   right: 0;
   border: 10px solid black;
   border-bottom: none;
-  padding: 0 20px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  /* background-color: orange; */
   z-index: 5;
+  background-color: white;
 }
 
-header h2 {
-  margin: 0;
+.logo {
+  width: 7vh;
+  height: 7vh;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h2 {
   color: black;
   font-family: 'Pacifico', cursive;
   box-sizing: border-box;
-  width: 8vh;
-  height: 8vh;
-  padding: 1.7vh;
-  border-radius: 50%;
-  background-color: white;
   font-size: 3vh;
 }
 
@@ -105,7 +109,6 @@ header h2 {
   position: fixed;
   background-color: rgba(99, 139, 255, 1);
   background-color: red;
-  /* background-color: black; */
   font-family: 'Pacifico', cursive;
   top: 50%;
   left: 50%;
@@ -187,7 +190,6 @@ header h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-bottom: 10vh;
   min-height: calc(100vh - 10px);
   border: 1px solid red;
 }
@@ -208,7 +210,7 @@ a:visited {
 
 /* HOME VIEW */
 
-.Home {
+.Title {
   text-align: center;
   justify-content: center;
 }
@@ -218,12 +220,12 @@ a:visited {
   margin: auto auto 35vh auto;
 }
 
-.Home .name {
+.Title .name {
   font-size: 3.5vh;
   font-family: 'Pacifico', cursive;
 }
 
-.Home .job {
+.Title .job {
   width: 100%;
   font-size: 2.5vh;
 }
@@ -255,9 +257,8 @@ a:visited {
 /* PROJECTS VIEW */
 
 .Projects {
-  padding-bottom: 10vh;
   width: 100%;
-  max-width: 600px;
+  /* max-width: 800px; */
 }
 
 .project {
@@ -268,61 +269,24 @@ a:visited {
   align-items: center;
   text-align: center;
   /* border: 1px solid black; */
-}
-
-.project .image-container {
-  position: relative;
-}
-
-.project .image-container .link-container {
-  border: 1px solid transparent;
-  color: transparent;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  font-size: 2vh;
+  height: 90vh;
 }
 
 .project .image-container img {
   display: block;
   max-width:100%;
-  max-height:50vh;
+  max-height:40vh;
   width: auto;
   height: auto;
-}
-
-.project .image-container a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-51%, -69%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 71%;
-  height: 55%;
-}
-
-.project .image-container a:hover {
-  background-color: rgba(0, 0, 0, .5);
-}
-
-.project .image-container a:hover .link-container {
-  border: 3px solid var(--blue);
-  border-radius: 5px;
-  color: white;
-}
-
-.link-container h4 {
-  margin: auto;
+  /* border: 1px solid black; */
 }
 
 .project-title {
   font-size: 18px;
+  /* border: 1px solid black; */
 }
 
-.eatstagram h4{
-  font-family: 'Permanent Marker', cursive;
+.project-title h4 {
   font-size: 40px;
   font-weight: normal;
   margin: 0;
@@ -331,6 +295,56 @@ a:visited {
 .project-title p {
   font-size: 14px;
   font-style: italic;
+}
+
+.eatstagram h4{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.battleship h4 {
+  font-family: 'Squada One', cursive;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: 3px solid blue;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 6vh;
+  width: 20vh;
+  margin: 3vh 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.technology-container h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.technology-container img {
+  height: 50px;
+}
+
+.technology-container #odd {
+  height: 40px;
 }
 
 /* PROJECT DETAIL PAGES */
@@ -396,27 +410,6 @@ a:visited {
 .project-background a:visited {
   color: rgb(99, 139, 255);
   font-weight: bold;
-}
-
-.technology-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.technology-container h3 {
-  width: 100%;
-  text-align: center;
-}
-
-.technology-container img {
-  height: 100px;
-}
-
-.technology-container #odd {
-  height: 80px;
 }
 
 /* CONTACT VIEW */

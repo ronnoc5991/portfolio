@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Home() {
+function Title() {
     return (
-        <div className="Home view" id="home">
+        <div className="Title view">
             <div className="name-container">
                 <div className="name">
                     <h1>Connor Streng</h1>
@@ -15,4 +15,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Title
