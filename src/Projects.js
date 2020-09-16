@@ -6,12 +6,29 @@ import { Link } from 'react-router-dom'
 
 const Projects = () => {
     return (
-            <div className="Projects view">
+            <div className="Projects view" id="projects">
                 <div className="title">
                     <h2>Projects</h2>
                 </div>
 
                 <div className="project">
+                    <div className="image-container">
+                        <Link exact to={`/projects/eatstagram`}>
+                            <div className="link-container">
+                                <h4>Check it out!</h4>
+                            </div>
+                        </Link>
+                        <img src={ EatstagramImage } alt=""/>
+                    </div>
+                    <div className="project-title eatstagram">
+                        <Link exact to={`/projects/eatstagram`}>
+                            <h4>Eatstagram</h4>
+                        </Link>
+                        <p>Inspiration for your next meal</p>
+                    </div>
+                </div>
+
+                {/* <div className="project">
                     <div className="project-image">
                             <div className="image-link">
                                 <Link exact to={`/projects/eatstagram`}>
@@ -23,14 +40,16 @@ const Projects = () => {
                         <img src={ EatstagramImage } alt=""/>
                     </div>
                     <div className="project-title">
-                        <h4>Eatstagram</h4>
+                        <Link exact to={`/projects/eatstagram`}>
+                            <h4>Eatstagram</h4>
+                        </Link>
                         <p>Inspiration for your next meal</p>
                     </div>
-                </div>
+                </div> */}
 
-                <hr/>
+                {/* <hr/> */}
 
-                <div className="project">
+                {/* <div className="project">
                     <div className="project-image">
                         <div className="image-link">
                             <Link exact to="/projects/pokemon">
@@ -47,9 +66,9 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <hr/>
+                <hr/> */}
 
-                <div className="project">
+                {/* <div className="project">
                     <div className="project-image">
                         <div className="image-link">
                             <Link exact to="/projects/battleship">
@@ -61,10 +80,12 @@ const Projects = () => {
                         <img src={ BattleshipImage } alt=""/>
                     </div>
                     <div className="project-title">
-                        <h4>Battleship</h4>
+                        <Link exact to="/projects/battleship">
+                            <h4>Battleship</h4>
+                        </Link>
                         <p>My take on the classic board game</p>
                     </div>
-                </div>
+                </div> */}
             </div>
     )
 }

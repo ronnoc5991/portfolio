@@ -16,7 +16,7 @@ function Battleship() {
                 <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
                     <div className="link">
                         <div className="project-link">
-                            <div>View the Site</div>
+                            <div>Play the Game</div>
                         </div>
                     </div>
                 </a>
