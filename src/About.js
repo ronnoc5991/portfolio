@@ -9,7 +9,7 @@ function About() {
   return (
     <div className="About view" id="about">
       <div className="title">
-        <h2>ABOUT ME</h2>
+        <h2>About Me</h2>
       </div>            
               <div className="paragraph">
                 <div className="maps-container">
@@ -18,17 +18,18 @@ function About() {
                   <img src={ Nederland } alt=""/>
                 </div>
                 <p>
-                  Born and raised in the USA, the last several years of my life have been an adventure 
-                  that has led me to Spain, where I lived and worked for two years, and now to the 
-                  Netherlands, where I live with my partner.
-                  I believe in continual growth and enjoy working on challenging projects.
-                  Let's get coffee to talk about the rest.
+                  I was born and raised in the USA.  After Univeristy, I moved to Spain, 
+                  where I lived and worked as a teacher for two years.  While there, I met my partner
+                  with whom I now live in the Netherlands.
+                </p>
+                <p>
+                  I am currently available for work.
                 </p>
               </div>
 
               <div className="arrow-down">
                   <a href="#contact">
-                      <i class="fa fa-chevron-down"></i>
+                      <i class="fa fa-chevron-down fa-2x"></i>
                   </a>
               </div>
 

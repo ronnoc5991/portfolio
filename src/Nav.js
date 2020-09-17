@@ -5,6 +5,8 @@ function Nav() {
 
 const [menuOpen, setMenuOpen] = useState(false);
 
+console.log(window.pageYOffset);
+
   function toggleMenu () {
     setMenuOpen(!menuOpen);
   }

@@ -17,6 +17,9 @@ const Projects = () => {
                         <h4>Eatstagram</h4>
                         <p>A fun personal project where I keep and share recipes.</p>
                     </div>
+                    <div className="image-container">
+                        <img src={ EatstagramImage } alt=""/>
+                    </div>
                     <div className="button-container">
                         <a href="https://ronnoc5991.github.io/eatstagram-react/" target="_blank">
                             <div className="button">PROJECT</div>
@@ -24,10 +27,6 @@ const Projects = () => {
                         <a href="https://github.com/ronnoc5991/eatstagram-react" target="_blank">
                             <div className="button">CODE</div>
                         </a>
-                    </div>
-
-                    <div className="image-container">
-                        <img src={ EatstagramImage } alt=""/>
                     </div>
                     <div className="technology-container">
                         <h3>Built with</h3>
@@ -38,7 +37,7 @@ const Projects = () => {
                     </div>
                     <div className="arrow-down">
                         <a href="#project-2">
-                            <i class="fa fa-chevron-down"></i>
+                            <i class="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
                 </div>
@@ -48,6 +47,9 @@ const Projects = () => {
                         <h4>BATTLESHIP</h4>
                         <p>This is my take on the classic two player board game.</p>
                     </div>
+                    <div className="image-container">
+                        <img src={ BattleshipImage } alt=""/>
+                    </div>
                     <div className="button-container">
                         <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
                             <div className="button">PROJECT</div>
@@ -55,9 +57,6 @@ const Projects = () => {
                         <a href="https://github.com/ronnoc5991/battleship-react" target="_blank">
                             <div className="button">CODE</div>
                         </a>
-                    </div>
-                    <div className="image-container">
-                        <img src={ BattleshipImage } alt=""/>
                     </div>
                     <div className="technology-container">
                         <h3>Built with:</h3>
@@ -68,7 +67,7 @@ const Projects = () => {
                     </div> 
                     <div className="arrow-down">
                         <a href="#about">
-                            <i class="fa fa-chevron-down"></i>
+                            <i class="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
                 </div>
