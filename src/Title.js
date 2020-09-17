@@ -11,6 +11,11 @@ function Title() {
                     I'm a <strong>Front End Developer</strong> based in <strong>Zeist, NL</strong>.
                 </div>
             </div>
+            <div className="arrow-down">
+                <a href="#project-1">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+            </div>
         </div>
     )
 }

@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 function Contact() {
     return (
         <div className="Contact view" id="contact">
             <div className="title">
-                <h2>Let's get in touch</h2>
+                <h2>LET'S GET IN TOUCH</h2>
             </div>
             <div className="contacts">
                 <div className="contact-box">

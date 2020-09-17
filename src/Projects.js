@@ -12,14 +12,18 @@ const Projects = () => {
     return (
             <div className="Projects view" id="projects">
 
-                <div className="project">
+                <div className="project" id="project-1">
                     <div className="project-title eatstagram">
                         <h4>Eatstagram</h4>
                         <p>A fun personal project where I keep and share recipes.</p>
                     </div>
                     <div className="button-container">
-                        <div className="button">PROJECT</div>
-                        <div className="button">CODE</div>
+                        <a href="https://ronnoc5991.github.io/eatstagram-react/" target="_blank">
+                            <div className="button">PROJECT</div>
+                        </a>
+                        <a href="https://github.com/ronnoc5991/eatstagram-react" target="_blank">
+                            <div className="button">CODE</div>
+                        </a>
                     </div>
 
                     <div className="image-container">
@@ -32,12 +36,25 @@ const Projects = () => {
                         <img src={ CSS } title="CSS" alt=""/>
                         <img src={ Firebase } title="Firebase" alt="" id="odd" />
                     </div>
+                    <div className="arrow-down">
+                        <a href="#project-2">
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div className="project">
+                <div className="project" id="project-2">
                     <div className="project-title battleship">
                         <h4>BATTLESHIP</h4>
                         <p>This is my take on the classic two player board game.</p>
+                    </div>
+                    <div className="button-container">
+                        <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
+                            <div className="button">PROJECT</div>
+                        </a>
+                        <a href="https://github.com/ronnoc5991/battleship-react" target="_blank">
+                            <div className="button">CODE</div>
+                        </a>
                     </div>
                     <div className="image-container">
                         <img src={ BattleshipImage } alt=""/>
@@ -49,6 +66,11 @@ const Projects = () => {
                         <img src={ CSS } title="CSS" alt=""/>
                         <img src={ Jest } title="Jest" alt="" id="odd"/>
                     </div> 
+                    <div className="arrow-down">
+                        <a href="#about">
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>

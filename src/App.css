@@ -6,7 +6,6 @@
   width: 100%;
   background-color: white;
   position: relative;
-  --blue: rgb(99, 139, 255);
 }
 
 .App {
@@ -14,7 +13,6 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  /* font-family: 'Poppins', sans-serif; */
 }
 
 header {
@@ -25,20 +23,19 @@ header {
   left: 0;
   right: 0;
   border: 10px solid black;
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   z-index: 5;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .logo {
   width: 7vh;
   height: 7vh;
-  /* border: 1px solid black; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -107,7 +104,6 @@ header {
 
 .pop-up-menu {
   position: fixed;
-  background-color: rgba(99, 139, 255, 1);
   background-color: red;
   font-family: 'Pacifico', cursive;
   top: 50%;
@@ -183,20 +179,17 @@ header {
 
 .view {
   box-sizing: border-box;
-  padding: 10vh 0;
   width: 100%;
-  /* min-width: 300px;
-  max-width: 850px; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   min-height: calc(100vh - 10px);
-  border: 1px solid red;
 }
 
 .title {
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  width: 100%;
 }
 
 a {
@@ -208,16 +201,36 @@ a:visited {
   color: black;
 }
 
+.arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -4vh);
+  animation-name: bounceArrow;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  z-index: 5;
+}
+
+@keyframes bounceArrow {
+  0% { transform: translate(-50%, -4vh); }
+  50% { transform: translate(-50%, -3vh);}
+  100% { transform: translate(-50%, -4vh); }
+}
+
+
 /* HOME VIEW */
 
 .Title {
   text-align: center;
   justify-content: center;
+  position: relative;
 }
 
 .name-container {
   width: 100%;
-  margin: auto auto 35vh auto;
+  margin: auto auto 50vh auto;
 }
 
 .Title .name {
@@ -233,25 +246,57 @@ a:visited {
 
 /* ABOUT VIEW */
 
+.About {
+  box-sizing: border-box;
+  padding-top: 10vh;
+  position: relative;
+  height: 100vh;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.About .title {
+  font-size: 35px;
+}
+
+.About .title h2 {
+  margin: 0;
+}
+
+.maps-container {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .About .paragraph {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid black; */
 }
 
 .About .paragraph img {
-  height: 15vh;
-  margin: 5vh auto;
-  filter: drop-shadow(0px 0px 6px grey)
+  filter: drop-shadow(0px 0px 6px grey);
+  height: 20vh;
+}
+
+@media (max-width: 500px) {
+  .About .paragraph img {
+    height: 10vh;
+  }
 }
 
 .About .paragraph p {
+  max-width: 800px;
+  width: 90%;
   line-height: 30px;
-  text-align: justify;
-  padding: 0 20px;
-
+  text-align: center;
+  padding: 0 10px;
+  font-size: 14px;
 }
 
 /* PROJECTS VIEW */
@@ -262,14 +307,18 @@ a:visited {
 }
 
 .project {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   /* border: 1px solid black; */
-  height: 90vh;
+  height: 100vh;
+  padding-top: 10vh;
+  /* padding-bottom: 10vh; */
+  box-sizing: border-box;
 }
 
 .project .image-container img {
@@ -278,7 +327,6 @@ a:visited {
   max-height:40vh;
   width: auto;
   height: auto;
-  /* border: 1px solid black; */
 }
 
 .project-title {
@@ -306,20 +354,31 @@ a:visited {
 }
 
 .button-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button {
-  border: 3px solid blue;
+  border: 3px solid red;
+  color: red;
   box-sizing: border-box;
   border-radius: 5px;
-  height: 6vh;
+  height: 5vh;
   width: 20vh;
-  margin: 3vh 3vh;
+  margin: 2vh 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms linear;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: red;
+  color: white;
 }
 
 .technology-container {
@@ -337,6 +396,7 @@ a:visited {
   font-size: 14px;
   font-weight: 400;
   font-style: italic;
+  margin: 5px 0;
 }
 
 .technology-container img {
@@ -347,77 +407,14 @@ a:visited {
   height: 40px;
 }
 
-/* PROJECT DETAIL PAGES */
-
-.project-detail-image {
-  position: relative;
-}
-
-.project-detail-image .link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-detail-image:hover .link {
-  background-color: rgba(0, 0, 0, .65);
-}
-
-.project-detail-image:hover .project-link {
-  border: 2px solid var(--blue);
-}
-
-.project-detail-image:hover .project-link div {
-  color: white;
-}
-
-.project-link {
-  height: 50px;
-  width: 200px;
-  border-radius: 5px;
-}
-
-.project-link div {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: transparent;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bold;
-}
-
-.project-detail-image img{
-  width: 100%;
-  box-shadow: 0 0 7px 2px black;
-}
-
-.project-background {
-  text-align: center;
-  margin: 5vh auto;
-}
-
-.project-background a {
-  color: rgb(99, 139, 255);
-  font-weight: bold;
-}
-
-.project-background a:visited {
-  color: rgb(99, 139, 255);
-  font-weight: bold;
-}
-
 /* CONTACT VIEW */
 
 .Contact {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: calc(100vh-10px);
+  padding-top: 10vh;
 }
 
 .contacts {
@@ -427,7 +424,6 @@ a:visited {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
   min-height: 50vh;
 }
 
