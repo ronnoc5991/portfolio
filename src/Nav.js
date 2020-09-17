@@ -7,6 +7,19 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 console.log(window.pageYOffset);
 
+var navBar = document.getElementById('navBar');
+
+window.addEventListener('resize', updatSize)
+
+function updateSize () {
+    
+}
+
+//calculate the number of pixels of the current viewport height
+//if offsetY is greater than or equal to that number ... change styles
+
+//on window resize... recalculate
+
   function toggleMenu () {
     setMenuOpen(!menuOpen);
   }
@@ -14,7 +27,7 @@ console.log(window.pageYOffset);
     return (
         <>
             <Router>
-                <header>
+                <header id="navBar">
                     <a href="#top">
                         <div className="logo">
                             <h2>CS</h2>
