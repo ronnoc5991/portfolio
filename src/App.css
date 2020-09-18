@@ -6,18 +6,20 @@
   width: 100%;
   background-color: white;
   position: relative;
+  --forest-green: #186218;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* overflow: hidden; */
 }
+
+/* NAV BAR */
 
 header {
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +32,16 @@ header {
   align-items: center;
   box-sizing: border-box;
   z-index: 5;
-  /* background-color: white; */
+  transition: background-color 400ms linear;
+}
+
+.scrolled {
+  background-color: white;
+  /* box-shadow: 0 0 5px 1px black; */
+}
+
+.green {
+  color: var(--forest-green);
 }
 
 .logo {
@@ -43,138 +54,62 @@ header {
 }
 
 .logo h2 {
-  color: black;
   color: white;
   font-family: 'Pacifico', cursive;
   box-sizing: border-box;
   font-size: 3vh;
+  transition: color 300ms linear;
 }
 
-.bar-container {
-  position: relative;
-  height: 20px;
-  width: 25px;
-  cursor: pointer;
-  z-index: 6;
-  transition: all 200ms linear;
+.scrolled .logo h2 {
+  color: var(--forest-green)
 }
 
-.open-container:hover {
-  transform: rotate(90deg)
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  border-radius: 15px;
-  background-color: black;
-  background-color: white;
-  transition: all 300ms ease-in-out;
-  position: absolute;
-}
-
-.bar-1 {
-  top: 0;
-}
-
-.bar-2 {
-  top: 43%;
-}
-
-.bar-3 {
-  bottom: 0;
-}
-
-.open-1 {
-  transform: rotate(315deg);
-  top: 50%;
-  background-color: white;
-}
-
-.open-2 {
-  transform: rotate(315deg);
-  background-color: transparent;
-}
-
-.open-3 {
-  transform: rotate(405deg);
-  top: 50%;
-  background-color: white;
-}
-
-/* POP UP MENU */
-
-.pop-up-menu {
-  position: fixed;
-  background-color: red;
-  font-family: 'Pacifico', cursive;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 400ms ease-in-out;
-  z-index: 5;
-}
-
-.pop-up-menu ul {
+header ul {
   all: unset;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   list-style-type: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 0;
-  min-width: 0;
   transition: all 300ms linear;
+  height: 100%;
 }
 
-.pop-up-menu li {
-  font-size: 24px;
-  margin: 5vh;
+header a {
+  height: 100%;
+}
+
+header li {
+  font-size: 14px;
+  padding: 0 20px;
   overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  position: relative;
 }
 
-.pop-up-menu p {
-  margin: 0;
+header li p {
+ margin: auto;
+ color: white;
+ transition: color 300ms linear;
 }
 
-.closed {
-  height: 0px;
-  width: 0px;
-  border-radius: 50%;
+.scrolled header li p {
+  color: var(--forest-green)
 }
 
-.closed a {
-  display: none;
-}
-
-.open {
-  height: 150vmax;
-  width: 150vmax;
-  border-radius: 50%;
-}
-
-.underline {
+header li .underline {
   width: 100%;
-  background-color: white;
   height: 3px;
-  transform: translateX(-110%);
-  transition: all 200ms linear;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.pop-up-menu li:hover .underline {
-  transform: translateX(0%);
-}
-
-.pop-up-menu a {
-  color: white;
-}
-
-.pop-up-menu a:visited {
-  color: white;
+header li:hover .underline {
+  background-color: var(--forest-green);
 }
 
 /* GENERAL STYLES */
@@ -268,6 +203,7 @@ a:visited {
   align-items: flex-start;
   flex-direction: row;
   justify-content: center;
+  background-color: rgba(250, 0, 0, .4)
 }
 
 .About .title {
@@ -332,10 +268,8 @@ a:visited {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  /* border: 1px solid black; */
   height: 100vh;
   padding-top: 10vh;
-  /* padding-bottom: 10vh; */
   box-sizing: border-box;
 }
 
@@ -379,10 +313,8 @@ a:visited {
 }
 
 .button {
-  border: 3px solid red;
-  border: 3px solid #186218;
-  color: red;
-  color: #186218;
+  border: 3px solid var(--forest-green);
+  color: var(--forest-green);
   box-sizing: border-box;
   border-radius: 5px;
   height: 5vh;
@@ -398,7 +330,7 @@ a:visited {
 
 .button:hover {
   background-color: red;
-  background-color: #186218;
+  background-color: var(--forest-green);
   color: white;
 }
 

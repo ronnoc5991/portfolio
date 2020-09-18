@@ -29,7 +29,7 @@ function About() {
 
               <div className="arrow-down">
                   <a href="#contact">
-                      <i class="fa fa-chevron-down fa-2x"></i>
+                      <i className="fa fa-chevron-down fa-2x"></i>
                   </a>
               </div>
 

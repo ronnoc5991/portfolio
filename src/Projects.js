@@ -37,7 +37,7 @@ const Projects = () => {
                     </div>
                     <div className="arrow-down">
                         <a href="#project-2">
-                            <i class="fa fa-chevron-down fa-2x"></i>
+                            <i className="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ const Projects = () => {
                     </div> 
                     <div className="arrow-down">
                         <a href="#about">
-                            <i class="fa fa-chevron-down fa-2x"></i>
+                            <i className="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ function Title() {
             </div>
             <div className="arrow-down">
                 <a href="#project-1">
-                    <i class="fa fa-chevron-down fa-2x"></i>
+                    <i className="fa fa-chevron-down fa-2x"></i>
                 </a>
             </div>
         </div>

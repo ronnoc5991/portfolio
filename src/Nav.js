@@ -1,75 +1,63 @@
 import React, { useState } from 'react'
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 
 function Nav() {
 
-const [menuOpen, setMenuOpen] = useState(false);
+const [scrolled, setScrolled] = useState(false);
 
-console.log(window.pageYOffset);
 
-var navBar = document.getElementById('navBar');
+window.onscroll = function(){
+    var distanceFromTop = window.scrollY;
+    var screenHeight = window.innerHeight;
+    var headerHeight = screenHeight / 10;
+    console.log('Top: ' + distanceFromTop);
+    console.log('Inner Height: ' + screenHeight)
+    if(distanceFromTop > (screenHeight - headerHeight)){
+        setScrolled(true)
+    } else {
+        setScrolled(false);
+    }
+    };
 
-window.addEventListener('resize', updatSize)
-
-function updateSize () {
-    
-}
-
-//calculate the number of pixels of the current viewport height
-//if offsetY is greater than or equal to that number ... change styles
-
-//on window resize... recalculate
-
-  function toggleMenu () {
-    setMenuOpen(!menuOpen);
-  }
 
     return (
         <>
-            <Router>
-                <header id="navBar">
-                    <a href="#top">
-                        <div className="logo">
-                            <h2>CS</h2>
-                        </div>
-                    </a>
-                    <div className={`bar-container ${menuOpen ? 'open-container' : ''}`} onClick={ toggleMenu }>
-                    <div className={`bar bar-1 ${menuOpen ? 'open-1' : 'closed-1'}`}></div>
-                    <div className={`bar bar-2 ${menuOpen ? 'open-2' : 'closed-2'}`}></div>
-                    <div className={`bar bar-3 ${menuOpen ? 'open-3' : 'closed-3'}`}></div>
+            <header className={`${ scrolled ? 'scrolled' : '' }`  }>
+                <a href="#top">
+                    <div className="logo">
+                        <h2>CS</h2>
                     </div>
+                </a>
+              
+                    <ul>
+                        <a href="#top">
+                            <li>
+                                <p className={`${ scrolled ? 'green' : '' }`}>Home</p>
+                                <div className="underline"></div>
+                            </li>
+                        </a>
 
-                    <div className={`pop-up-menu ${ menuOpen ? 'open' : 'closed' }`}>
-                        <ul>
-                        <li>
-                            <a href="#top" onClick={ toggleMenu }>
-                                <p>Home</p>
+                        <a href="#projects" >
+                            <li>
+                                <p className={`${ scrolled ? 'green' : '' }`}>Projects</p> 
                                 <div className="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#projects" onClick={ toggleMenu }>
-                                <p>Projects</p> 
+                            </li>
+                        </a>
+                        <a href="#about" >
+                            <li>
+                                <p className={`${ scrolled ? 'green' : '' }`}>About</p>
                                 <div className="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about" onClick={ toggleMenu }>
-                                <p>About</p>
+                            </li>                       
+                        </a>
+                        <a href="#contact" >
+                            <li>
+                                <p className={`${ scrolled ? 'green' : '' }`}>Contact</p> 
                                 <div className="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" onClick={ toggleMenu }>
-                                <p>Contact</p> 
-                                <div className="underline"></div>
-                            </a>
-                        </li>
-                        </ul>
-                    </div>
+                            </li>
+                        </a>
 
-                </header>
-            </Router>
+                    </ul>
+
+            </header>
         </>
     )
 }
