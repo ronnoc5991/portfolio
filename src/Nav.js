@@ -31,26 +31,26 @@ window.onscroll = function(){
                     <ul>
                         <a href="#top">
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>Home</p>
+                                <p className={`${ scrolled ? 'green' : '' }`}>HOME</p>
                                 <div className="underline"></div>
                             </li>
                         </a>
 
-                        <a href="#projects" >
+                        <a href="#project-1" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>Projects</p> 
+                                <p className={`${ scrolled ? 'green' : '' }`}>PROJECTS</p> 
                                 <div className="underline"></div>
                             </li>
                         </a>
                         <a href="#about" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>About</p>
+                                <p className={`${ scrolled ? 'green' : '' }`}>ABOUT</p>
                                 <div className="underline"></div>
                             </li>                       
                         </a>
                         <a href="#contact" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>Contact</p> 
+                                <p className={`${ scrolled ? 'green' : '' }`}>CONTACT</p> 
                                 <div className="underline"></div>
                             </li>
                         </a>

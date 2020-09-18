@@ -2,17 +2,18 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  border: 10px solid black;
   width: 100%;
   background-color: white;
   position: relative;
   --forest-green: #186218;
+  --gold: #e2b553;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 /* NAV BAR */
@@ -24,9 +25,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  border: 10px solid black;
-  border-bottom: none;
-  padding: 0 20px;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,32 +36,27 @@ header {
 
 .scrolled {
   background-color: white;
-  /* box-shadow: 0 0 5px 1px black; */
-}
-
-.green {
-  color: var(--forest-green);
+  box-shadow: 0 0 5px 1px rgb(211, 211, 211);
 }
 
 .logo {
-  width: 7vh;
-  height: 7vh;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .logo h2 {
   color: white;
   font-family: 'Pacifico', cursive;
   box-sizing: border-box;
-  font-size: 3vh;
+  font-size: 28px;
   transition: color 300ms linear;
 }
 
 .scrolled .logo h2 {
-  color: var(--forest-green)
+  color: var(--gold);
+  color: #d7263d;
 }
 
 header ul {
@@ -80,7 +74,7 @@ header a {
 }
 
 header li {
-  font-size: 14px;
+  font-size: 16px;
   padding: 0 20px;
   overflow: hidden;
   height: 100%;
@@ -94,10 +88,13 @@ header li p {
  margin: auto;
  color: white;
  transition: color 300ms linear;
+ font-family: 'Poppins', sans-serif;
+ font-weight: bold;
 }
 
-.scrolled header li p {
-  color: var(--forest-green)
+.scrolled li p {
+  color: var(--gold);
+  color: #d7263d;
 }
 
 header li .underline {
@@ -109,7 +106,12 @@ header li .underline {
 }
 
 header li:hover .underline {
-  background-color: var(--forest-green);
+  background-color: white;
+}
+
+.scrolled li:hover .underline {
+  background-color: var(--gold);
+  background-color: #d7263d;
 }
 
 /* GENERAL STYLES */
@@ -203,7 +205,6 @@ a:visited {
   align-items: flex-start;
   flex-direction: row;
   justify-content: center;
-  background-color: rgba(250, 0, 0, .4)
 }
 
 .About .title {
@@ -229,7 +230,7 @@ a:visited {
 }
 
 .About .paragraph img {
-  filter:  grayscale(60%) blur(1px);
+  filter:  grayscale(60%);
   height: 20vh;
   transition: all 300ms linear;
 }
@@ -257,15 +258,14 @@ a:visited {
 
 .Projects {
   width: 100%;
-  /* max-width: 800px; */
 }
 
 .project {
+  width: 100%;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh;
@@ -273,17 +273,36 @@ a:visited {
   box-sizing: border-box;
 }
 
+.project-information {
+  margin: 20vh 0 auto auto;
+  width: 30vw;
+  min-width: 300px;
+  height: 40vh;
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .project .image-container img {
+  grid-column: 2 / 3;
+  margin: auto auto auto 0;
   display: block;
-  max-width:100%;
-  max-height:40vh;
+  max-width:100vw;
+  max-height:60vh;
   width: auto;
   height: auto;
 }
 
 .project-title {
   font-size: 18px;
-  /* border: 1px solid black; */
+  width: 100%;
+  text-align: left;
+}
+
+.project-title hr {
+  width: 100px;
+  margin: 1vh auto auto 0;
 }
 
 .project-title h4 {
@@ -295,6 +314,7 @@ a:visited {
 .project-title p {
   font-size: 14px;
   font-style: italic;
+  margin: 2vh 0 5vh 0;
 }
 
 .eatstagram h4{
@@ -309,17 +329,21 @@ a:visited {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.button-container a {
+  width: 45%;
 }
 
 .button {
-  border: 3px solid var(--forest-green);
-  color: var(--forest-green);
+  border: 3px solid #d7263d;
+  color: #d7263d;
   box-sizing: border-box;
   border-radius: 5px;
   height: 5vh;
-  width: 20vh;
-  margin: 2vh 3vh;
+  width: 100%;
+  min-width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,8 +353,8 @@ a:visited {
 }
 
 .button:hover {
-  background-color: red;
-  background-color: var(--forest-green);
+  background-color: var(--gold);
+  background-color: #d7263d;
   color: white;
 }
 
@@ -338,13 +362,14 @@ a:visited {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin: 0 0 5vh 0;
 }
 
 .technology-container h3 {
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   font-weight: 400;
   font-style: italic;
@@ -395,4 +420,54 @@ a:visited {
   background-color: grey;
   width: 1px;
   height: 14px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1025px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .project-information {
+    margin: 5vh auto 0 auto;
+    height: 25vh;
+  }
+
+  .project-title h4 {
+    font-size: 5vh;
+    text-align: center;
+  }
+
+  .project-title hr {
+    margin: 1vh auto auto auto;
+  }
+
+  .project-title p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .technology-container {
+    margin: 0 0 2vh 0;
+  }
+  
+  .technology-container h3 {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+  }
+  
+  .technology-container img {
+    height: 40px;
+  }
+  
+  .technology-container #odd {
+    height: 32px;
+  }
+
+  .project .image-container img {
+    margin: auto;
+  }
 }
