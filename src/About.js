@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css'
-import Hiker from './hiker.png'
 import Tent from './tent.png'
 import Mountains from './mountains.png'
 import Chef from './chef.png'
@@ -24,7 +23,6 @@ function About() {
                   Outside of Web Development, I enjoy hiking, camping, travelling and cooking.
                 </p>
                 <div className="maps-container">
-                  <img src={ Hiker } alt=""/>
                   <img src={ Tent } alt=""/>
                   <img src={ Mountains } alt=""/>
                   <img src={ Chef } alt=""/>
