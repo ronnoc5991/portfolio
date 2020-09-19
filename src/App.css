@@ -5,8 +5,8 @@
   width: 100%;
   background-color: white;
   position: relative;
-  --forest-green: #186218;
   --gold: #e2b553;
+  --red: rgb(141,27,60);
 }
 
 .App {
@@ -55,8 +55,7 @@ header {
 }
 
 .scrolled .logo h2 {
-  color: var(--gold);
-  color: #d7263d;
+  color: var(--red);
 }
 
 header ul {
@@ -94,7 +93,7 @@ header li p {
 
 .scrolled li p {
   color: var(--gold);
-  color: #d7263d;
+  color: var(--red);
 }
 
 header li .underline {
@@ -111,7 +110,7 @@ header li:hover .underline {
 
 .scrolled li:hover .underline {
   background-color: var(--gold);
-  background-color: #d7263d;
+  background-color: var(--red);
 }
 
 .bar-container {
@@ -134,7 +133,7 @@ header li:hover .underline {
 }
 
 .scrolled .bar {
-  background-color: #d7263d;
+  background-color: var(--red);
 }
 
 .bar-1 {
@@ -146,7 +145,7 @@ header li:hover .underline {
   top: 0%;
   left: 50%;
   transform: rotate(315deg) translate(-50%, -50%);
-  background-color: #d7263d;
+  background-color: var(--red);
 }
 
 .bar-2 {
@@ -168,7 +167,7 @@ header li:hover .underline {
   top: 0%;
   right: 50%;
   transform: rotate(405deg) translate(65%, -120%);
-  background-color: #d7263d;
+  background-color: var(--red);
 }
 
 .pop-up-menu {
@@ -224,7 +223,7 @@ header li:hover .underline {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  min-height: calc(100vh - 10px);
+  min-height: 100vh;
 }
 
 .title {
@@ -267,7 +266,6 @@ a:visited {
   text-align: center;
   justify-content: center;
   position: relative;
-  background-color: rgb(0, 90, 192);
   color: white;
   background-image: url(./trees.jpg);
   background-position: top;
@@ -321,8 +319,7 @@ a:visited {
   width: 100%;
   background-image: url(./pattern.jpg);
   background-size: 300px;
-  /* filter: invert(86%) sepia(86%) saturate(2563%) hue-rotate(316deg) brightness(95%) contrast(87%); */
-  filter: invert(80%) sepia(60%) saturate(2423%) hue-rotate(319deg) brightness(89%) contrast(100%);
+  filter: invert(90%) sepia(60%) saturate(2423%) hue-rotate(319deg) brightness(89%) contrast(100%);
 }
 
 .About .title {
@@ -415,7 +412,6 @@ a:visited {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* border: 1px solid blue; */
 }
 
 .project .image-container img {
@@ -470,8 +466,8 @@ a:visited {
 }
 
 .button {
-  border: 3px solid #d7263d;
-  color: #d7263d;
+  border: 3px solid var(--red);
+  color: var(--red);
   box-sizing: border-box;
   border-radius: 5px;
   height: 5vh;
@@ -487,7 +483,7 @@ a:visited {
 
 .button:hover {
   background-color: var(--gold);
-  background-color: #d7263d;
+  background-color: var(--red);
   color: white;
 }
 
