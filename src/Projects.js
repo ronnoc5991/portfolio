@@ -1,11 +1,6 @@
 import React from 'react'
-import EatstagramImage from './eatstagram-computer.JPG'
-import BattleshipImage from './battleship.png'
-import ReactImage from './react.png'
-import HTML from './html.png'
-import CSS from './css.png'
-import Firebase from './firebase.png'
-import Jest from './jest.png'
+import EatstagramImage from './eatstagram-computer-2.JPG'
+import BattleshipImage from './battleship-computer.JPG'
 
 const Projects = () => {
     return (
@@ -22,14 +17,6 @@ const Projects = () => {
                                 Built with React and Google Firebase.
                             </p>
                         </div>
-
-                        {/* <div className="technology-container">
-                            <h3>Built with</h3>
-                            <img src={ ReactImage } title="React" alt=""/>
-                            <img src={ HTML } title="HTML" alt=""/>
-                            <img src={ CSS } title="CSS" alt=""/>
-                            <img src={ Firebase } title="Firebase" alt="" id="odd" />
-                        </div> */}
 
                         <div className="button-container">
                             <a href="https://ronnoc5991.github.io/eatstagram-react/" target="_blank">
@@ -64,7 +51,10 @@ const Projects = () => {
                         <div className="project-title battleship">
                             <h4>BATTLESHIP</h4>
                             <hr/>
-                            <p>This is my take on the classic two player board game.</p>
+                            <p>
+                                This is my take on the classic two player board game.
+                                Built with React.
+                            </p>
                         </div>
                         <div className="button-container">
                             <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
@@ -75,16 +65,6 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
-                    
-                    {/* <div className="technology-container">
-                        <h3>Built with:</h3>
-                        <img src={ ReactImage } title="React" alt=""/>
-                        <img src={ HTML } title="HTML" alt=""/>
-                        <img src={ CSS } title="CSS" alt=""/>
-                        <img src={ Jest } title="Jest" alt="" id="odd"/>
-                    </div>  */}
-
-
 
                     <div className="arrow-down">
                         <a href="#about">

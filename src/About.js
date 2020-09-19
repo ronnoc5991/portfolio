@@ -1,30 +1,35 @@
 import React from 'react';
-import './App.css';
-import USA from './usa.png'
-import Spain from './spain.png'
-import Nederland from './Nederland.png'
+import './App.css'
+import Hiker from './hiker.png'
+import Tent from './tent.png'
+import Mountains from './mountains.png'
+import Chef from './chef.png'
+import Backpack from './backpack.png'
 
 function About() {
 
   return (
     <div className="About view" id="about">
+      <div className="background-div"></div>
       <div className="title">
         <h2>About Me</h2>
       </div>            
               <div className="paragraph">
-                <div className="maps-container">
-                  <img src={ USA } alt=""/>                
-                  <img src={ Spain } alt=""/>
-                  <img src={ Nederland } alt=""/>
-                </div>
                 <p>
                   I was born and raised in the USA.  After Univeristy, I moved to Spain, 
                   where I lived and worked as a teacher for two years.  While there, I met my partner
                   with whom I now live in the Netherlands.
                 </p>
                 <p>
-                  I am currently available for work.
+                  Outside of Web Development, I enjoy hiking, camping, travelling and cooking.
                 </p>
+                <div className="maps-container">
+                  <img src={ Hiker } alt=""/>
+                  <img src={ Tent } alt=""/>
+                  <img src={ Mountains } alt=""/>
+                  <img src={ Chef } alt=""/>
+                  <img src={ Backpack } alt=""/>
+                </div>
               </div>
 
               <div className="arrow-down">
