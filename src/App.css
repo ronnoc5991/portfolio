@@ -6,7 +6,7 @@
   background-color: white;
   position: relative;
   --gold: #e2b553;
-  --red: rgb(141,27,60);
+  --red: rgb(182,30,79);
 }
 
 .App {
@@ -60,27 +60,30 @@ header {
 
 header ul {
   all: unset;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   list-style-type: none;
   transition: all 300ms linear;
   height: 100%;
+  width: 400px;
 }
 
-header a {
+header ul a {
   height: 100%;
+  width: 100%;
 }
 
-header li {
+header ul li {
   font-size: 16px;
-  padding: 0 20px;
   overflow: hidden;
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
-  display: flex;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 header li p {
@@ -89,6 +92,12 @@ header li p {
  transition: color 300ms linear;
  font-family: 'Poppins', sans-serif;
  font-weight: bold;
+ width: 100%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
 }
 
 .scrolled li p {
@@ -97,19 +106,19 @@ header li p {
 }
 
 header li .underline {
-  width: 100%;
+  margin: auto auto 0 auto;
+  width: 0%;
   height: 3px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  transition: all 400ms ease-in-out;
 }
 
 header li:hover .underline {
+  width: 100%;
   background-color: white;
 }
 
 .scrolled li:hover .underline {
-  background-color: var(--gold);
+  width: 100%;
   background-color: var(--red);
 }
 
@@ -209,6 +218,7 @@ header li:hover .underline {
 
 .pop-up-menu ul{
   margin: auto;
+  display: flex;
   height: 50vh;
   width: 100%;
   flex-direction: column;
@@ -320,7 +330,7 @@ a:visited {
   width: 100%;
   background-image: url(./pattern.jpg);
   background-size: 300px;
-  filter: invert(90%) sepia(60%) saturate(2423%) hue-rotate(319deg) brightness(89%) contrast(100%);
+  filter: invert(85%) sepia(50%) saturate(3223%) hue-rotate(319deg) brightness(89%) contrast(100%);
 }
 
 .About .title {
@@ -618,7 +628,7 @@ a:visited {
 
 @media (max-width: 500px) {
   header {
-    padding: 10px 10px 0 10px;
+    padding: 10px 30px 0 10px;
   }
 
   .About .paragraph img {
@@ -627,5 +637,9 @@ a:visited {
 
   .About .paragraph p {
     font-size: 14px;
+  }
+
+  .arrow-down {
+    display: none;
   }
 }
