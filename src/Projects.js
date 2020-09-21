@@ -19,10 +19,10 @@ const Projects = () => {
                         </div>
 
                         <div className="button-container">
-                            <a href="https://ronnoc5991.github.io/eatstagram-react/" target="_blank">
+                            <a href="https://ronnoc5991.github.io/eatstagram/" target="_blank">
                                 <div className="button">PROJECT</div>
                             </a>
-                            <a href="https://github.com/ronnoc5991/eatstagram-react" target="_blank">
+                            <a href="https://github.com/ronnoc5991/eatstagram" target="_blank">
                                 <div className="button">CODE</div>
                             </a>
                         </div>
