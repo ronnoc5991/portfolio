@@ -1,5 +1,5 @@
 import React from 'react'
-import EatstagramImage from './eatstagram-computer-2.JPG'
+import EatstagramImage from './eatstagram.JPG'
 import BattleshipImage from './battleship-computer.JPG'
 
 const Projects = () => {
