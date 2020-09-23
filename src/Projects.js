@@ -2,7 +2,9 @@ import React from 'react'
 import EatstagramImage from './eatstagram.JPG'
 import BattleshipImage from './battleship-computer.JPG'
 
+
 const Projects = () => {
+
     return (
             <div className="Projects view">
 

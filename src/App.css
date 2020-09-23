@@ -32,6 +32,7 @@ header {
   box-sizing: border-box;
   z-index: 5;
   transition: background-color 400ms linear;
+  /* opacity: 0; */
 }
 
 .scrolled {
@@ -47,14 +48,15 @@ header {
 }
 
 .logo h2 {
-  color: white;
-  font-family: 'Pacifico', cursive;
+  display: none;
+  font-family: 'Fredoka One', cursive;
   box-sizing: border-box;
   font-size: 28px;
   transition: color 300ms linear;
 }
 
 .scrolled .logo h2 {
+  display: block;
   color: var(--red);
 }
 
@@ -91,7 +93,6 @@ header li p {
  color: white;
  transition: color 300ms linear;
  font-family: 'Poppins', sans-serif;
- font-weight: bold;
  width: 100%;
  position: absolute;
  top: 50%;
@@ -292,13 +293,13 @@ a:visited {
 
 .Title .name {
   font-size: 3.4vh;
-  font-family: 'Pacifico', cursive;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Fredoka One', cursive;
 }
 
 .Title .job {
   width: 100%;
   font-size: 2.5vh;
+  font-family: 'Poppins', sans-serif;
 }
 
 .Title .arrow-down a,
@@ -620,7 +621,9 @@ a:visited {
   }
 
   .logo {
-    display: none;
+    /* display: none; */
+    order: 5;
+    margin: 0;
   }
 
   .bar-container {

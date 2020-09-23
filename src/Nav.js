@@ -1,6 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+import gsap from 'gsap'
 
 function Nav() {
+
+    var header = useRef(null)
+
+    useEffect(() => {
+        const tl = gsap.timeline()
+        tl.fromTo(header, {opacity: 0}, {opacity: 1, duration: 2, delay: 4.5})
+    }, [])
 
 const [scrolled, setScrolled] = useState(false);
 const [open, setOpen] = useState(false);
@@ -25,10 +33,10 @@ window.onscroll = function(){
 
     return (
         <>
-            <header className={`${ scrolled ? 'scrolled' : '' }`  }>
+            <header  ref={ el => { header = el } } className={`${ scrolled ? 'scrolled' : '' }`  }>
                     <div className="logo">
                         <a href="#top">
-                            <h2>CS</h2>
+                            <h2>Connor Streng</h2>
                         </a>
                     </div>
               
