@@ -26,11 +26,11 @@ window.onscroll = function(){
     return (
         <>
             <header className={`${ scrolled ? 'scrolled' : '' }`  }>
-                <a href="#top">
                     <div className="logo">
-                        <h2>CS</h2>
+                        <a href="#top">
+                            <h2>CS</h2>
+                        </a>
                     </div>
-                </a>
               
                     <ul className="expanded">
                         <a href="#top">

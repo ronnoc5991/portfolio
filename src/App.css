@@ -293,6 +293,7 @@ a:visited {
 .Title .name {
   font-size: 3.4vh;
   font-family: 'Pacifico', cursive;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .Title .job {
@@ -458,7 +459,7 @@ a:visited {
 }
 
 .eatstagram h4{
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .battleship h4 {
@@ -615,6 +616,10 @@ a:visited {
 @media (max-width: 900px) {
 
   .expanded {
+    display: none;
+  }
+
+  .logo {
     display: none;
   }
 
