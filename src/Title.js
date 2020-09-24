@@ -3,19 +3,21 @@ import gsap from 'gsap'
 
 function Title() {
 
+    var container = useRef(null); 
     var name = useRef(null);
     var description = useRef(null);
     var arrowDown = useRef(null);
 
     useEffect(() => {
         const tl = gsap.timeline();
-        tl.fromTo(name, {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 2, delay: 2})
-        tl.fromTo(description, {opacity: 0}, {opacity: 1, duration: 1.5})
+        tl.fromTo(container, {opacity: 0}, {opacity: 1, duration: 1, delay: 1})
+        tl.fromTo(name, {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 2, delay: 1})
+        tl.fromTo(description, {opacity: 0}, {opacity: 1, duration: 1})
         tl.fromTo(arrowDown, {opacity: 0}, {opacity: 1, duration: 2})
     }, [])
 
     return (
-        <div className="Title view">
+        <div className="Title view" ref={ el => { container = el } }>
             <div className="name-container">
                 <div className="name" ref={ el => { name = el } }>
                     <h1>Connor Streng</h1>
