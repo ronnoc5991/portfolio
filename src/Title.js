@@ -9,8 +9,8 @@ function Title() {
 
     useEffect(() => {
         const tl = gsap.timeline();
-        tl.fromTo(name, {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 2, delay: 1.5})
-        tl.fromTo(description, {opacity: 0}, {opacity: 1, duration: 1})
+        tl.fromTo(name, {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 2, delay: 2})
+        tl.fromTo(description, {opacity: 0}, {opacity: 1, duration: 1.5})
         tl.fromTo(arrowDown, {opacity: 0}, {opacity: 1, duration: 2})
     }, [])
 

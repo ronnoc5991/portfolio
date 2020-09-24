@@ -7,7 +7,7 @@ function Nav() {
 
     useEffect(() => {
         const tl = gsap.timeline()
-        tl.fromTo(header, {opacity: 0}, {opacity: 1, duration: 2, delay: 4.5})
+        tl.fromTo(header, {opacity: 0}, {opacity: 1, duration: 2, delay: 5.5})
     }, [])
 
 const [scrolled, setScrolled] = useState(false);
