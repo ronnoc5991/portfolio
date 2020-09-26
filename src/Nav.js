@@ -17,6 +17,10 @@ function toggleMenu () {
     setOpen(!open);
 }
 
+function closeMenu () {
+    setOpen(false);
+}
+
 window.onscroll = function(){
     var distanceFromTop = window.scrollY;
     var screenHeight = window.innerHeight;
@@ -35,7 +39,7 @@ window.onscroll = function(){
         <>
             <header  ref={ el => { header = el } } className={`${ scrolled ? 'scrolled' : '' }`  }>
                     <div className="logo">
-                        <a href="#top">
+                        <a href="#top" onClick={ closeMenu }>
                             <h2>Connor Streng</h2>
                         </a>
                     </div>

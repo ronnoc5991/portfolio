@@ -182,17 +182,14 @@ header li:hover .underline {
 
 .pop-up-menu {
   position: fixed;
-  border-radius: 50%;
   transition: all 400ms ease-in-out;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 0;
-  width: 0;
+  top: 0;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  transform-origin: center;
   display: flex;
-  background-color: var(--gold);
+  background-color: transparent;
 }
 
 .pop-up-menu {
@@ -200,8 +197,8 @@ header li:hover .underline {
 }
 
 .open {
-  height: 150vmax;
-  width: 150vmax;
+  left: 0;
+  background-color: var(--gold);
 }
 
 .open .bar {
@@ -214,7 +211,8 @@ header li:hover .underline {
 
 .open li p {
   color: white;
-  z-index: 5;
+  font-size: 20px;
+  z-index: 10;
 }
 
 .pop-up-menu ul{
@@ -279,7 +277,6 @@ a:visited {
   justify-content: center;
   position: relative;
   color: white;
-  /* background-image: url(./trees.jpg); */
   background-image: url(./trees-min.jpg);
   background-position: top;
   background-size: cover;
@@ -628,9 +625,9 @@ a:visited {
   }
 
   .logo {
-    /* display: none; */
     order: 5;
     margin: 0;
+    z-index: 10;
   }
 
   .bar-container {
