@@ -197,6 +197,7 @@ header li:hover .underline {
 
 .open {
   background-color: var(--gold);
+  background-color: white;
   width: 150vmax;
   height: 150vmax;
 }
@@ -212,6 +213,7 @@ header li:hover .underline {
 
 .open li p {
   color: white;
+  color: var(--red);
   font-size: 18px;
   z-index: 10;
 }
@@ -386,6 +388,7 @@ a:visited {
   text-align: center;
   font-size: 2.3vmin;
   margin: 5vh auto;
+  text-shadow: 0 0 20px black;
 }
 
 /* PROJECTS VIEW */
@@ -636,7 +639,7 @@ a:visited {
   .logo {
     order: 5;
     margin: 0;
-    z-index: 10;
+    /* z-index: 10; */
   }
 
   .bar-container {
@@ -657,7 +660,8 @@ a:visited {
   }
 
   .About .paragraph p {
-    font-size: 14px;
+    font-size: 18px;
+    text-shadow: 0 0 20px black;
   }
 
   .arrow-down {

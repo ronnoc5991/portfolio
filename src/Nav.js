@@ -89,7 +89,7 @@ window.onscroll = function(){
 
                             <a href="#project-1" onClick={ toggleMenu }>
                                 <li>
-                                    <p className={`${ scrolled ? 'green' : '' }`}>PROJECTS</p> 
+                                    <p className={`${ scrolled ? 'green' : '' }`}>PORTFOLIO</p> 
                                 </li>
                             </a>
                             <a href="#about" onClick={ toggleMenu }>
