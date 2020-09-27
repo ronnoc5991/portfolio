@@ -37,13 +37,13 @@ const Projects = () => {
                         </div>
 
                         <div className="arrow-down">
-                            <a href="#project-2">
+                            <a href="#about">
                                 <i className="fa fa-chevron-down fa-2x"></i>
                             </a>
                         </div>
                 </div>
 
-                <div className="project" id="project-2">
+                {/* <div className="project" id="project-2">
 
                     <div className="image-container">
                         <img src={ BattleshipImage } alt=""/>
@@ -73,7 +73,7 @@ const Projects = () => {
                             <i className="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
-                </div>
+                </div> */}
 
             </div>
     )

@@ -24,6 +24,10 @@ function Contact() {
                 <a href="https://github.com/ronnoc5991" target="_blank">
                     <p>GITHUB</p>
                 </a>
+                <div className="vertical-line"></div>
+                <a href="https://codepen.io/ronnoc5991" target="_blank">
+                    <p>CODEPEN</p>
+                </a>
             </div>
         </div>
     )

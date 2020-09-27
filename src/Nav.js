@@ -7,7 +7,7 @@ function Nav() {
 
     useEffect(() => {
         const tl = gsap.timeline()
-        tl.fromTo(header, {opacity: 0}, {opacity: 1, duration: 2, delay: 6})
+        tl.fromTo(header, {opacity: 0}, {opacity: 1, duration: 1, delay: 4.5})
     }, [])
 
 const [scrolled, setScrolled] = useState(false);
@@ -54,7 +54,7 @@ window.onscroll = function(){
 
                         <a href="#project-1" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>PROJECTS</p> 
+                                <p className={`${ scrolled ? 'green' : '' }`}>PORTFOLIO</p> 
                                 <div className="underline"></div>
                             </li>
                         </a>
