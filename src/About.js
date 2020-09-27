@@ -16,7 +16,7 @@ function About() {
       </div>            
               <div className="paragraph">
                 <p>
-                  I was born and raised in the USA.  After Univeristy, I moved to Spain, 
+                  I was born and raised in the USA.  After University, I moved to Spain, 
                   where I lived and worked as a teacher for two years.  While there, I met my partner
                   with whom I now live in the Netherlands.
                 </p>
