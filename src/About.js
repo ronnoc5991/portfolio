@@ -20,6 +20,11 @@ function About() {
                   where I lived and worked as a teacher for two years.  While there, I met my partner
                   with whom I now live in the Netherlands.
                 </p>
+
+                <p>
+                  I am competent with the following technologies: <br/> HTML, CSS, Javascript, React, SASS/SCSS, Git, Github, tesing (Jest, Jasmine). 
+                </p>
+
                 <p>
                   Outside of Web Development, I enjoy hiking, camping, travelling and cooking.
                 </p>

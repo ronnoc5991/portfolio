@@ -656,13 +656,19 @@ a:visited {
     padding: 10px 30px 0 10px;
   }
 
+  .About .title {
+    font-size: 25px;
+  }
+
   .About .paragraph img {
     height: 10vh;
   }
 
   .About .paragraph p {
-    font-size: 18px;
+    font-size: 14px;
     text-shadow: 0 0 20px black;
+    margin: 2vh auto;
+    line-height: 22px;
   }
 
   .arrow-down {
@@ -675,5 +681,9 @@ a:visited {
 
   .Title .name {
     font-size: 3.0vh;
+  }
+
+  .Contact .title h2 {
+    font-size: 5vh;
   }
 }
