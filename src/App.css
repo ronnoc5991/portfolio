@@ -49,10 +49,9 @@ header {
 
 .logo h2 {
   display: none;
-  font-family: 'Fredoka One', cursive;
   font-family: 'Julius Sans One', sans-serif;
   box-sizing: border-box;
-  font-size: 28px;
+  font-size: 20px;
   transition: color 300ms linear;
 }
 
@@ -672,5 +671,9 @@ a:visited {
 
   .contacts {
     font-size: 12px;
+  }
+
+  .Title .name {
+    font-size: 3.0vh;
   }
 }
