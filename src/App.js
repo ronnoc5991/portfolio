@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
+import './styles/styles.css'
 import Nav from './Nav'
 import Title from './Title'
 import About from './About'
