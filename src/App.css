@@ -50,6 +50,7 @@ header {
 .logo h2 {
   display: none;
   font-family: 'Fredoka One', cursive;
+  font-family: 'Julius Sans One', sans-serif;
   box-sizing: border-box;
   font-size: 28px;
   transition: color 300ms linear;
@@ -298,6 +299,7 @@ a:visited {
   opacity: 0;
   font-size: 3.4vh;
   font-family: 'Fredoka One', cursive;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .Title .job {
