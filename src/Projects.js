@@ -1,6 +1,6 @@
 import React from 'react'
 import EatstagramImage from './eatstagram.JPG'
-import BattleshipImage from './battleship-computer.JPG'
+import PokemonImage from './pokemon.JPG'
 
 
 const Projects = () => {
@@ -37,32 +37,32 @@ const Projects = () => {
                         </div>
 
                         <div className="arrow-down">
-                            <a href="#about">
+                            <a href="#project-2">
                                 <i className="fa fa-chevron-down fa-2x"></i>
                             </a>
                         </div>
                 </div>
 
-                {/* <div className="project" id="project-2">
+                <div className="project" id="project-2">
 
                     <div className="image-container">
-                        <img src={ BattleshipImage } alt=""/>
+                        <img src={ PokemonImage } alt=""/>
                     </div>
 
                     <div className="project-information">
-                        <div className="project-title battleship">
-                            <h4>BATTLESHIP</h4>
+                        <div className="project-title pokemon">
+                            <h4>Pokedex</h4>
                             <hr/>
                             <p>
-                                This is my take on the classic two player board game.
-                                Built with React.
+                                I wanted to build an API consumer that wasn't a cliche weather app.  I found some
+                                great Pokemon APIs and went to work.  Built with React.
                             </p>
                         </div>
                         <div className="button-container">
-                            <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
+                            <a href="https://ronnoc5991.github.io/pokemon/" target="_blank">
                                 <div className="button">PROJECT</div>
                             </a>
-                            <a href="https://github.com/ronnoc5991/battleship-react" target="_blank">
+                            <a href="https://github.com/ronnoc5991/pokemon" target="_blank">
                                 <div className="button">CODE</div>
                             </a>
                         </div>
@@ -73,7 +73,7 @@ const Projects = () => {
                             <i className="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
-                </div> */}
+                </div>
 
             </div>
     )
