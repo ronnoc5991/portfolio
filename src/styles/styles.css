@@ -525,19 +525,19 @@ a:visited {
           box-sizing: border-box;
 }
 
-#project-1 {
+#project-1, #project-3 {
   -ms-grid-columns: 2fr 3fr;
       grid-template-columns: 2fr 3fr;
 }
 
-#project-1 .project-information {
+#project-1 .project-information, #project-3 .project-information {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
   margin: 10vh auto auto 10vw;
 }
 
-#project-1 .image-container {
+#project-1 .image-container, #project-3 .image-container {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -580,6 +580,19 @@ a:visited {
   display: block;
   max-width: 100vw;
   max-height: 60vh;
+  width: auto;
+  height: auto;
+}
+
+#project-3 .image-container {
+  margin-top: 10vh;
+}
+
+#project-3 .image-container img {
+  margin: 0 auto auto auto;
+  display: block;
+  max-width: 100vw;
+  max-height: 50vh;
   width: auto;
   height: auto;
 }
@@ -770,10 +783,16 @@ a:visited {
   #project-2 .project-information {
     margin: auto;
   }
+  #project-3 .project-information {
+    margin: auto;
+  }
   #project-2 .image-container {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  #project-3 .image-container {
+    margin-top: 0vh;
   }
   .project-information {
     margin: 5vh auto 0 auto;

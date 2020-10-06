@@ -1,6 +1,7 @@
 import React from 'react'
 import EatstagramImage from './eatstagram.JPG'
 import PokemonImage from './pokemon.JPG'
+import BattleshipImage from './battleship.JPG'
 
 
 const Projects = () => {
@@ -32,15 +33,16 @@ const Projects = () => {
                     </div>
 
 
-                        <div className="image-container">
-                            <img src={ EatstagramImage } alt=""/>
-                        </div>
+                    <div className="image-container">
+                        <img src={ EatstagramImage } alt=""/>
+                    </div>
 
-                        <div className="arrow-down">
-                            <a href="#project-2">
-                                <i className="fa fa-chevron-down fa-2x"></i>
-                            </a>
-                        </div>
+                    <div className="arrow-down">
+                        <a href="#project-2">
+                            <i className="fa fa-chevron-down fa-2x"></i>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div className="project" id="project-2">
@@ -69,10 +71,45 @@ const Projects = () => {
                     </div>
 
                     <div className="arrow-down">
+                        <a href="#project-3">
+                            <i className="fa fa-chevron-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="project" id="project-3">
+
+                    <div className="project-information">
+                        <div className="project-title battleship">
+                            <h4>Battleship</h4>
+                            <hr/>
+                            <p>
+                                This is my take on the classic board game "Battleship"/"Zeeslag".  Built with React.
+                            </p>
+                        </div>
+
+                        <div className="button-container">
+                            <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
+                                <div className="button">PROJECT</div>
+                            </a>
+                            <a href="https://github.com/ronnoc5991/battleship-react" target="_blank">
+                                <div className="button">CODE</div>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div className="image-container">
+                        <img src={ BattleshipImage } alt=""/>
+                    </div>
+
+                    <div className="arrow-down">
                         <a href="#about">
                             <i className="fa fa-chevron-down fa-2x"></i>
                         </a>
                     </div>
+                    
                 </div>
 
             </div>
