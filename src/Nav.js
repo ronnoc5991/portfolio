@@ -25,8 +25,6 @@ window.onscroll = function(){
     var distanceFromTop = window.scrollY;
     var screenHeight = window.innerHeight;
     var headerHeight = screenHeight / 10;
-    console.log('Top: ' + distanceFromTop);
-    console.log('Inner Height: ' + screenHeight)
     if(distanceFromTop > (screenHeight - headerHeight)){
         setScrolled(true)
     } else {

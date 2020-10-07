@@ -81,7 +81,7 @@ const Projects = () => {
 
                     <div className="project-information">
                         <div className="project-title battleship">
-                            <h4>Battleship</h4>
+                            <h4>BATTLESHIP</h4>
                             <hr/>
                             <p>
                                 This is my take on the classic board game "Battleship"/"Zeeslag".  Built with React.

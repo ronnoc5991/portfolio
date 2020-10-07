@@ -22,7 +22,7 @@ function About() {
                 </p>
 
                 <p>
-                  I am competent with the following technologies: <br/> HTML, CSS, Javascript, React, SASS/SCSS, Git, Github, tesing (Jest, Jasmine). 
+                  I usually work with the following technologies: <br/> HTML, CSS, SCSS, Javascript, React, Git, Github, tesing (Jest, Jasmine). 
                 </p>
 
                 <p>

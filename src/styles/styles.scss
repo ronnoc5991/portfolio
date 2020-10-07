@@ -528,32 +528,6 @@
     color: white;
   }
   
-  .technology-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0 0 5vh 0;
-  }
-  
-  .technology-container h3 {
-    width: 100%;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: italic;
-    margin: 5px 0;
-  }
-  
-  .technology-container img {
-    height: 50px;
-  }
-  
-  .technology-container #odd {
-    height: 40px;
-  }
-  
   /* CONTACT VIEW */
   
   .Contact {
