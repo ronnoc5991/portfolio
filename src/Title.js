@@ -18,14 +18,19 @@ function Title() {
 
     return (
         <div className="Title view" ref={ el => { container = el } }>
-            <div className="name-container">
-                <div className="name" ref={ el => { name = el } }>
-                    <h1>Connor Streng</h1>
-                </div>
-                <div className="job" ref={ el => { description = el } }>
-                    I'm a <strong>Front End Developer</strong> based in <strong>Zeist, NL</strong>.
+
+            <div class="name-container">
+                <div class="name" ref={ el => { name = el } }>
+                    <span aria-hidden="true">CONNOR STRENG</span>
+                        CONNOR STRENG
+                    <span aria-hidden="true">CONNOR STRENG</span>
                 </div>
             </div>
+
+            <div className="job" ref={ el => { description = el } }>
+                    I'm a <strong>Front End Developer</strong> based in <strong>Zeist, NL</strong>.
+            </div>
+
             <div className="arrow-down" ref={ el => { arrowDown = el } }>
                 <a href="#project-1">
                     <i className="fa fa-chevron-down fa-2x"></i>
