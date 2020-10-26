@@ -48,6 +48,7 @@ header {
   -webkit-transition: background-color 400ms linear;
   transition: background-color 400ms linear;
   opacity: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .scrolled {
@@ -71,7 +72,6 @@ header {
 
 .logo h2 {
   display: none;
-  font-family: 'Julius Sans One', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
@@ -109,7 +109,7 @@ header ul a {
 }
 
 header ul li {
-  font-size: 16px;
+  font-size: 14px;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -125,6 +125,7 @@ header ul li {
 header li p {
   margin: auto;
   color: white;
+  color: black;
   -webkit-transition: color 300ms linear;
   transition: color 300ms linear;
   font-family: 'Poppins', sans-serif;
@@ -152,7 +153,7 @@ header li .underline {
 
 header li:hover .underline {
   width: 100%;
-  background-color: white;
+  background-color: black;
 }
 
 .scrolled li:hover .underline {
@@ -375,10 +376,24 @@ a:visited {
           justify-content: center;
   position: relative;
   color: white;
-  background-image: url(../trees-min.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.portrait {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.5vmin 0.8vmin 0.1vmin black;
+          box-shadow: 0 0.5vmin 0.8vmin 0.1vmin black;
+}
+
+.portrait img {
+  height: 150%;
 }
 
 .name-container {
@@ -396,12 +411,13 @@ a:visited {
           justify-content: center;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
+  color: black;
 }
 
 .name {
-  font-size: 9vmin;
+  font-size: 3vmin;
   position: relative;
 }
 
@@ -503,6 +519,7 @@ a:visited {
   font-family: 'Poppins', sans-serif;
   opacity: 0;
   width: 100%;
+  color: black;
 }
 
 .Title .arrow-down {
@@ -512,6 +529,7 @@ a:visited {
 .Title .arrow-down a,
 .Title .arrow-down a:visited {
   color: white;
+  color: black;
 }
 
 /* ABOUT VIEW */

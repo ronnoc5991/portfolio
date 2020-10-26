@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import gsap from 'gsap'
+import Portrait from './portrait.JPG'
 
 function Title() {
 
@@ -9,8 +9,8 @@ function Title() {
     var arrowDown = useRef(null);
 
     useEffect(() => {
-        const tl = gsap.timeline();
-        tl.fromTo(container, {opacity: 0}, {opacity: 1, duration: .5, delay: 1})
+        const tl = gsap.timeline(); //eslint-disable-line
+        tl.fromTo(container, {opacity: 0}, {opacity: 1, duration: .5})
         tl.fromTo(name, {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 1.5, delay: .5})
         tl.fromTo(description, {opacity: 0}, {opacity: 1, duration: 1})
         tl.fromTo(arrowDown, {opacity: 0}, {opacity: 1, duration: 1})
@@ -21,14 +21,18 @@ function Title() {
 
             <div class="name-container">
                 <div class="name" ref={ el => { name = el } }>
-                    <span aria-hidden="true">CONNOR STRENG</span>
-                        CONNOR STRENG
-                    <span aria-hidden="true">CONNOR STRENG</span>
+                    {/* <span aria-hidden="true">Connor</span> */}
+                        Hi, I'm Connor
+                    {/* <span aria-hidden="true">Connor</span> */}
                 </div>
             </div>
 
+            <div className="portrait">
+                <img src={ Portrait } alt=""/>
+            </div>
+
             <div className="job" ref={ el => { description = el } }>
-                    I'm a <strong>Front End Developer</strong> based in <strong>Zeist, NL</strong>.
+                    I'm a <strong>Front End Developer</strong> based in <strong>Zeist, NL</strong>
             </div>
 
             <div className="arrow-down" ref={ el => { arrowDown = el } }>

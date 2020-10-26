@@ -1,36 +1,35 @@
 import React, { useState, useRef, useEffect } from 'react'
-import gsap from 'gsap'
 
 function Nav() {
 
     var header = useRef(null)
 
     useEffect(() => {
-        const tl = gsap.timeline()
+        const tl = gsap.timeline() //eslint-disable-line
         tl.fromTo(header, {opacity: 0}, {opacity: 1, duration: 1, delay: 4.5})
     }, [])
 
-const [scrolled, setScrolled] = useState(false);
-const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [open, setOpen] = useState(false);
 
-function toggleMenu () {
-    setOpen(!open);
-}
-
-function closeMenu () {
-    setOpen(false);
-}
-
-window.onscroll = function(){
-    var distanceFromTop = window.scrollY;
-    var screenHeight = window.innerHeight;
-    var headerHeight = screenHeight / 10;
-    if(distanceFromTop > (screenHeight - headerHeight)){
-        setScrolled(true)
-    } else {
-        setScrolled(false);
+    function toggleMenu () {
+        setOpen(!open);
     }
-    };
+
+    function closeMenu () {
+        setOpen(false);
+    }
+
+    // window.onscroll = function(){
+    //     var distanceFromTop = window.scrollY;
+    //     var screenHeight = window.innerHeight;
+    //     var headerHeight = screenHeight / 10;
+    //     if(distanceFromTop > (screenHeight - headerHeight)){
+    //         setScrolled(true)
+    //     } else {
+    //         setScrolled(false);
+    //     }
+    //     };
 
 
     return (
@@ -45,26 +44,26 @@ window.onscroll = function(){
                     <ul className="expanded">
                         <a href="#top">
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>HOME</p>
+                                <p className={`${ scrolled ? 'green' : '' }`}>Home</p>
                                 <div className="underline"></div>
                             </li>
                         </a>
 
                         <a href="#project-1" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>PORTFOLIO</p> 
+                                <p className={`${ scrolled ? 'green' : '' }`}>Portfolio</p> 
                                 <div className="underline"></div>
                             </li>
                         </a>
                         <a href="#about" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>ABOUT</p>
+                                <p className={`${ scrolled ? 'green' : '' }`}>About</p>
                                 <div className="underline"></div>
                             </li>                       
                         </a>
                         <a href="#contact" >
                             <li>
-                                <p className={`${ scrolled ? 'green' : '' }`}>CONTACT</p> 
+                                <p className={`${ scrolled ? 'green' : '' }`}>Contact</p> 
                                 <div className="underline"></div>
                             </li>
                         </a>
