@@ -1,34 +1,41 @@
 import React, { useRef, useEffect } from 'react'
-import Portrait from './portrait.JPG'
 
 function Title() {
 
     var container = useRef(null); 
-    var name = useRef(null);
-    var description = useRef(null);
-    var arrowDown = useRef(null);
+    var text = useRef(null); 
+    
 
     useEffect(() => {
         const tl = gsap.timeline(); //eslint-disable-line
-        tl.fromTo(container, {opacity: 0}, {opacity: 1, duration: .5})
-        tl.fromTo(name, {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 1.5, delay: .5})
-        tl.fromTo(description, {opacity: 0}, {opacity: 1, duration: 1})
-        tl.fromTo(arrowDown, {opacity: 0}, {opacity: 1, duration: 1})
+        tl.to(text, {color: "var(--light-on)", textShadow: "0 -40px 100px, 0 0 2px, 0 0 1em #516ace, 0 0 0.5em #516ace, 0 0 0.1em #516ace, 0 10px 3px #000", duration: .01, delay: 1.5});
+        // tl.to(container, {backgroundColor: "var(--background-on)", duration: .0});
+
+        tl.to(text, {color: "var(--light-off)", textShadow: "none", duration: .01, delay: .2});
+        // tl.to(container, {backgroundColor: "var(--background-off)", duration: .0});
+
+        tl.to(text, {color: "var(--light-on)", textShadow: "0 -40px 100px, 0 0 2px, 0 0 1em #516ace, 0 0 0.5em #516ace, 0 0 0.1em #516ace, 0 10px 3px #000", duration: .01, delay: .2});
+        // tl.to(container, {backgroundColor: "var(--background-on)", duration: .0});
+
+        tl.to(text, {color: "var(--light-off)", textShadow: "none", duration: .01, delay: .2});
+        // tl.to(container, {backgroundColor: "var(--background-off)", duration: .0});
+
+        tl.to(text, {color: "var(--light-on)", textShadow: "0 -40px 100px, 0 0 2px, 0 0 1em #516ace, 0 0 0.5em #516ace, 0 0 0.1em #516ace, 0 10px 3px #000", duration: .01, delay: .2});
+        // tl.to(container, {backgroundColor: "var(--background-on)", duration: .0});
+
     }, [])
 
     return (
         <div className="Title view" ref={ el => { container = el } }>
 
-            <div class="name-container">
-                <div class="name" ref={ el => { name = el } }>
-                    {/* <span aria-hidden="true">Connor</span> */}
-                        Hi, I'm Connor
-                    {/* <span aria-hidden="true">Connor</span> */}
+                <div className="text" ref={ el => { text = el } }>
+                    <span>C</span>onnor S<span>treng</span>
                 </div>
-            </div>
 
-            <div className="portrait">
-                <img src={ Portrait } alt=""/>
+            {/* <div class="name-container">
+                <div class="name" ref={ el => { name = el } }>
+                    Hi, I'm Connor
+                </div>
             </div>
 
             <div className="job" ref={ el => { description = el } }>
@@ -39,7 +46,7 @@ function Title() {
                 <a href="#project-1">
                     <i className="fa fa-chevron-down fa-2x"></i>
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }
