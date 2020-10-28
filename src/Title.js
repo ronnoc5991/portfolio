@@ -28,8 +28,6 @@ function Title() {
     return (
         <div className="Title" ref={ el => { container = el } }>
 
-            <div className="background"></div>
-
             <div className="wrapper">
                 <div className="text" ref={ el => { text = el } }>
                     <span>C</span>onnor S<span>treng</span>
@@ -42,9 +40,15 @@ function Title() {
                 <div className="right-border border"></div>
             </div>
 
-            {/* <div className="ground">
-
-            </div> */}
+            <div className="arrow-1 arrow">
+                <i className="fa fa-chevron-down fa-2x"></i>
+            </div>
+            <div className="arrow-2 arrow">
+                <i className="fa fa-chevron-down fa-2x"></i>
+            </div>
+            <div className="arrow-3 arrow">
+                <i className="fa fa-chevron-down fa-2x"></i>
+            </div>
 
         </div>
     )
