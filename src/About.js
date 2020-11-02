@@ -9,8 +9,8 @@ function About() {
 
   return (
     <div className="About view" id="about">
-      <div className="background-div"></div>
-      <div className="filter"></div>
+      {/* <div className="background-div"></div>
+      <div className="filter"></div> */}
       <div className="title">
         <h2>About Me</h2>
       </div>            

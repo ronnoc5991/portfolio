@@ -1,7 +1,10 @@
 import React from 'react'
-import EatstagramImage from './eatstagram.JPG'
-import PokemonImage from './pokemon.JPG'
-import BattleshipImage from './battleship.JPG'
+import EatstagramHome from './EatstagramCropped.jpg'
+import EatstagramExplore from './eatstagram-explore.JPG'
+import BorrelHome from './borrel-beter-home.JPG'
+import BorrelPlank from './plank-screenshot.JPG'
+import BorrelCustom from './custom-plank.JPG'
+import Battleship from './battleship-gameplay.JPG'
 
 
 const Projects = () => {
@@ -16,8 +19,8 @@ const Projects = () => {
                             <h4>Eatstagram</h4>
                             <hr/>
                             <p>
-                                A fun personal project where I keep and share recipes.
-                                Built with React and Google Firebase.
+                                A fun personal project where I keep and share recipes.  Users can perform CRUD operations.
+                                Frontend built with React.  Backend lives on Firebase.
                             </p>
                         </div>
 
@@ -34,7 +37,7 @@ const Projects = () => {
 
 
                     <div className="image-container">
-                        <img src={ EatstagramImage } alt=""/>
+                        <img id="eatstagram-1" src={ EatstagramHome } alt=""/>
                     </div>
 
                     <div className="arrow-down">
@@ -48,23 +51,23 @@ const Projects = () => {
                 <div className="project" id="project-2">
 
                     <div className="image-container">
-                        <img src={ PokemonImage } alt=""/>
+                        <img src={ BorrelHome } alt=""/>
                     </div>
 
                     <div className="project-information">
-                        <div className="project-title pokemon">
-                            <h4>Pokedex</h4>
+                        <div className="project-title borrel-beter">
+                            <h4>Borrel Beter</h4>
                             <hr/>
                             <p>
-                                I wanted to build an API consumer that wasn't a cliche weather app.  I found some
-                                great Pokemon APIs and went to work.  Built with React.
+                                E-commerce site for borrel plankjes.  Customers can choose from pre-made plankjes or make their own.  
+                                Frontend built with React.  Backend lives on Firebase.
                             </p>
                         </div>
                         <div className="button-container">
-                            <a href="https://ronnoc5991.github.io/pokemon/" target="_blank">
+                            <a href="https://ronnoc5991.github.io/borrel-beter/" target="_blank">
                                 <div className="button">PROJECT</div>
                             </a>
-                            <a href="https://github.com/ronnoc5991/pokemon" target="_blank">
+                            <a href="https://github.com/ronnoc5991/borrel-beter" target="_blank">
                                 <div className="button">CODE</div>
                             </a>
                         </div>
@@ -101,7 +104,7 @@ const Projects = () => {
 
 
                     <div className="image-container">
-                        <img src={ BattleshipImage } alt=""/>
+                        <img src={ Battleship } alt=""/>
                     </div>
 
                     <div className="arrow-down">

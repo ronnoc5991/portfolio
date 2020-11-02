@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './styles/styles.css'
 import Nav from './Nav'
 import Title from './Title'
@@ -7,16 +7,17 @@ import Projects from './Projects'
 import Contact from './Contact'
 
 function App() {
+  
+  useEffect(() => {
+    gsap.to(window, { duration: .2, scrollTo: '.Title'}); //eslint-disable-line
+  }, [])
 
   return (
     <div className="App">
 
-      <div className="background"></div>
+      <Nav />
 
-
-      <Nav/>
-
-      <Title/>
+      <Title />
 
       <Projects />
 

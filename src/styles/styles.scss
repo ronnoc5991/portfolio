@@ -1,10 +1,4 @@
 :root {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    width: 100%;
-    background-color: white;
-    position: relative;
     --gold: #e2b553;
     --red: rgb(216, 0, 0);
     --light-off: #101112;
@@ -14,250 +8,43 @@
   }
   
   .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     overflow: hidden;
-  }
-
-  .background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url(../bricks);
-    background-size: 500px;
-    filter: contrast(200%) grayscale(100%) brightness(10%);
+    background-color: black;
+    height: 1000vh;
+    width: 1000vw;
+    position: relative;
   }
   
   /* NAV BAR */
   
-  header {
-    width: 100%;
-    height: 10vh;
+  .Nav {
     position: fixed;
-    top: 0;
-    left: 0;
     right: 0;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 5;
-    transition: background-color 400ms linear;
-    opacity: 0;
-    font-family: 'Poppins', sans-serif;
-
-  }
-  
-  .scrolled {
-    background-color: white;
-    box-shadow: 0 0 5px 1px rgb(211, 211, 211);
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .logo h2 {
-    display: none;
-    // font-family: 'Julius Sans One', sans-serif;
-    box-sizing: border-box;
-    font-size: 20px;
-    transition: color 300ms linear;
-  }
-  
-  .scrolled .logo h2 {
-    display: block;
-    color: var(--red);
-  }
-  
-  header ul {
-    all: unset;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    transition: all 300ms linear;
-    height: 100%;
-    width: 400px;
-  }
-  
-  header ul a {
-    height: 100%;
-    width: 100%;
-  }
-  
-  header ul li {
-    font-size: 14px;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-  }
-  
-  header li p {
-   margin: auto;
-   color: white;
-   color: black;
-   transition: color 300ms linear;
-   font-family: 'Poppins', sans-serif;
-   width: 100%;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   text-align: center;
-  }
-  
-  .scrolled li p {
-    color: var(--gold);
-    color: var(--red);
-  }
-  
-  header li .underline {
-    margin: auto auto 0 auto;
-    width: 0%;
-    height: 3px;
-    transition: all 400ms ease-in-out;
-  }
-  
-  header li:hover .underline {
-    width: 100%;
-    background-color: black;
-  }
-  
-  .scrolled li:hover .underline {
-    width: 100%;
-    background-color: var(--red);
-  }
-  
-  .bar-container {
-    display: none;
-    position: relative;
-    height: 25px;
-    width: 30px;
-    z-index: 5;
-    cursor: pointer;
-  }
-  
-  .bar {
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-    position: absolute;
-    transition: all 400ms linear;
-    transform-origin: center;
-  }
-  
-  .scrolled .bar {
-    background-color: var(--red);
-  }
-  
-  .bar-1 {
     top: 0;
     left: 0;
-  }
-  
-  .open-bar-1 {
-    top: 0%;
-    left: 50%;
-    transform: rotate(315deg) translate(-50%, -50%);
-    background-color: var(--red);
-  }
-  
-  .bar-2 {
-    top: 50%;
-    left: 0;
-    transform: translate(0%, -50%);
-  }
-  
-  #hidden-2 {
-    background-color: transparent;
-    transform: translate(0, -50%) rotate(360deg);
-  }
-  
-  .bar-3 {
-    bottom: 0;
-  }
-  
-  .open-bar-3 {
-    top: 0%;
-    right: 50%;
-    transform: rotate(405deg) translate(65%, -120%);
-    background-color: var(--red);
-  }
-  
-  .pop-up-menu {
-    position: fixed;
-    transition: all 400ms ease-in-out;
-    height: 0;
-    width: 0;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
     display: flex;
-    background-color: transparent;
-    color: transparent;
-  }
-  
-  .open {
-    background-color: var(--gold);
-    background-color: white;
-    width: 150vmax;
-    height: 150vmax;
-  }
-  
-  .open .bar {
-    background-color: white;
-  }
-  
-  .pop-up-menu li p {
-    color: transparent;
-    transform: all 400ms linear;
-  }
-  
-  .open li p {
-    color: white;
-    color: var(--red);
-    font-size: 18px;
-    z-index: 10;
-  }
-  
-  .pop-up-menu ul{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    z-index: 100;
+
+    .link {
+      height: 8vh;
+      width: 8vh;
+      border: .4vh solid white;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1vh;
+    }
+
+    .link:hover {
+      cursor: pointer;
+    }
   }
-  
+
   /* GENERAL STYLES */
-  
-  .view {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    min-height: 100vh;
-  }
   
   .title {
     font-family: 'Poppins', sans-serif;
@@ -296,16 +83,16 @@
   /* HOME VIEW */
   
   .Title {
+    position: absolute;
+    top: 0;
+    left: 50%;
     text-align: center;
     justify-content: center;
     position: relative;
     box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, 0);
     
     .wrapper {
       position: absolute;
@@ -318,8 +105,6 @@
 
     .border {
       border: 1vmin solid var(--light-off);
-      // box-shadow: 0 -1vh 5vh, 0 0 3px, 0 0 1em #516ace, 0 0 0.5em #516ace, 0 0 0.1em #516ace, 0 10px 3px #000;
-      // box-shadow: 0 -1vh 5vh #516ace, 0 0 3px #516ace, 0 0 1em #516ace, 0 0 0.5em #516ace, 0 0 0.1em #516ace, 0 10px 3px #000;
     }
 
     .top-border {
@@ -563,33 +348,21 @@
   .About {
     box-sizing: border-box;
     padding: 10vh 0 10vh 0;
-    position: relative;
     height: 100vh;
+    width: 100vw;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     color: white;
     box-shadow: 0 0 2px white;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
   }
   
   .About i {
     color: white;
-  }
-  
-  .background-div {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url(../about-2.JPG);
-    background-size: contain;
-    filter: grayscale(100%);
-  }
-  
-  .filter {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(216, 0, 0, .45);
   }
   
   .About .title {
@@ -632,23 +405,26 @@
     text-shadow: 0 0 20px black;
   }
   
-  /* PROJECTS VIEW */
+  /* ----------------------------------- PROJECTS VIEW ------------------------------------ */
   
   .Projects {
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
   }
   
   .project {
     height: 100vh;
     width: 100%;
-    position: relative;
     display: grid;
-    padding-top: 10vh;
     box-sizing: border-box;
     color: white;
+    padding-top: 9vh;
   }
-  
+
   #project-1, #project-3 {
     grid-template-columns: 2fr 3fr;
   }
@@ -666,18 +442,18 @@
     grid-template-columns: 3fr 2fr;
   }
   
-  #project-2 .image-container {
-    grid-column: 1 / 2;
-  }
-  
   #project-2 .project-information {
     grid-column: 2 / 3;
     margin: 10vh 10vw auto auto;
   }
   
+  #project-2 .image-container {
+    grid-column: 1 / 2;
+  }
+  
+  
   .project-information {
-    width: 20vw;
-    height: 30vh;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -688,19 +464,6 @@
     display: block;
     max-width:100vw;
     max-height:60vh;
-    width: auto;
-    height: auto;
-  }
-
-  #project-3 .image-container {
-    margin-top: 10vh;
-  }
-
-  #project-3 .image-container img {
-    margin: 0 auto auto auto;
-    display: block;
-    max-width: 100vw;
-    max-height: 50vh;
     width: auto;
     height: auto;
   }
@@ -730,6 +493,10 @@
   
   .eatstagram h4{
     font-family: 'Julius Sans One', sans-serif;
+  }
+
+  .borrel-beter h4 {
+    font-family: 'Spectral SC', serif;
   }
   
   .battleship h4 {
@@ -772,6 +539,10 @@
   /* CONTACT VIEW */
   
   .Contact {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -816,35 +587,24 @@
     .project {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
-      padding-bottom: 10vh;
+      border: 10px solid red;
+      padding-top: 2vh;
     }
   
-    #project-1 .project-information {
-      margin: auto;
-    }
-  
-    #project-2 .project-information {
-      margin: auto;
+    .image-container {
+      height: 50vh;
+      width: 80vw;
     }
 
-    #project-3 .project-information {
-      margin: auto;
-    }
-  
     #project-2 .image-container {
       order: 2;
     }
-
-    #project-3 .image-container {
-      margin-top: 0vh;
-    }
   
     .project-information {
-      margin: 5vh auto 0 auto;
+      width: 80%;
       height: 25vh;
-      height: auto;
       min-width: 280px;
     }
   
@@ -861,36 +621,13 @@
     }
   
     .project .image-container img {
-      margin: auto;
-      max-height: 50vh;
-      max-width: 90vw;
-    }
-  }
-  
-  @media (max-width: 900px) {
-  
-    .expanded {
-      display: none;
-    }
-  
-    .logo {
-      order: 5;
-      margin: 0;
-      /* z-index: 10; */
-    }
-  
-    .bar-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: space-between;
+      // margin: auto;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
   
   @media (max-width: 500px) {
-    header {
-      padding: 10px 30px 0 10px;
-    }
   
     .About .title {
       font-size: 25px;
