@@ -10,6 +10,9 @@
 .App {
   overflow: hidden;
   background-color: black;
+  background-image: url(../space.jpg);
+  background-size: 1000px;
+  background-repeat: repeat;
   height: 1000vh;
   width: 1000vw;
   position: relative;
