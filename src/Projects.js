@@ -36,6 +36,16 @@ const Projects = () => {
                         <img id="eatstagram-1" src={ EatstagramHome } alt=""/>
                     </div>
 
+                    {/* <div className="arrow-1 arrow">
+                            <i className="fa fa-chevron-down fa-2x"></i>
+                        </div>
+                        <div className="arrow-2 arrow">
+                            <i className="fa fa-chevron-down fa-2x"></i>
+                        </div>
+                        <div className="arrow-3 arrow">
+                            <i className="fa fa-chevron-down fa-2x"></i>
+                        </div> */}
+
                 </div>
 
                 <div className="project" id="project-2">

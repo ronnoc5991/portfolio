@@ -10,12 +10,7 @@ function App() {
   
   useEffect(() => {
     gsap.to(window, { duration: .2, scrollTo: '.Title'}); //eslint-disable-line
-    window.addEventListener('resize', goHome);
   }, [])
-
-  function goHome () {
-    gsap.to(window, { duration: .2, scrollTo: '.Title'}); //eslint-disable-line
-  }
 
   return (
     <div className="App">
