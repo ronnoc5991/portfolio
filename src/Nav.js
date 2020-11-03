@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Compass from './compass.png'
+import UFO from './ufo.png'
 
 function Nav() {
 
@@ -21,16 +22,24 @@ function Nav() {
             </div>
             <div className="link-container">
                 <div className={`home-link link ${open ? 'open' : ''}`} onClick={ () => navigate('.Title') } >
-                    Home
+                    <img src={ UFO } alt=""/>
+                    <div className="light-beam"></div>
+                    <div className="link-name">Home</div>
                 </div>
                 <div className={`portfolio-link link ${ open ? 'open' : '' }`} onClick={ () => navigate('.Projects') } >
-                    Portfolio
+                    <img src={ UFO } alt=""/>
+                    <div className="light-beam"></div>
+                    <div className="link-name">Portfolio</div>
                 </div>
                 <div className={`about-link link ${ open ? 'open' : '' }`} onClick={ () => navigate('.About') } >
-                    About
+                    <img src={ UFO } alt=""/>
+                    <div className="light-beam"></div>
+                    <div className="link-name">About</div>
                 </div>
                 <div className={`contact-link link ${ open ? 'open' : '' }`} onClick={ () => navigate('.Contact') } >
-                    Contact
+                    <img src={ UFO } alt=""/>
+                    <div className="light-beam"></div>
+                    <div className="link-name">Contact</div>
                 </div>
             </div>
         </div>

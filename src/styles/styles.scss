@@ -17,6 +17,12 @@
     width: 1000vw;
     position: relative;
   }
+
+  ::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+  }
   
   /* NAV BAR */
   
@@ -35,6 +41,7 @@
       height: 9vh;
       width: 9vh;
       cursor: pointer;
+      transition: all 300ms ease-in-out;
 
       img {
         height: 100%;
@@ -43,34 +50,74 @@
       }
     }
 
+    .compass-container:hover {
+      transform: rotate(10deg);
+    }
+
     .link-container {
       width: 90vw;
+      position: absolute;
       display: flex;
       margin-left: 10vh;
       justify-content: space-around;
 
       .link {
-        opacity: 0;
+        transform: translateY(-10vh);
+
+        .link-name {
+          position: absolute;
+          top: 12vh;
+          opacity: 0;
+        }
       }
 
       .open {
-        opacity: 1;
+        transform: translateY(0) !important;
+
+        .light-beam {
+          position: absolute;
+          bottom: 2vh;
+          background-color: transparent;
+          width: 2vw;
+          height: 6vh;
+          border-radius: 50%;
+          box-shadow: 0 8vh 3vh 1vh rgba(20, 200, 249, 1);
+          animation: float 1000ms infinite;
+        }
+
+        .link-name {
+          opacity: 1;
+          text-shadow: .1vmin .1vmin black, -.1vmin -.1vmin black, -.1vmin .1vmin black, .1vmin -.1vmin black;
+        }
+
+        img {
+          animation: float 1000ms infinite;
+        }
       }
     }
 
     .link {
       height: 8vh;
       width: 8vh;
-      border: .4vh solid white;
       color: white;
-      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 1vh;
       cursor: pointer;
       transition: all 300ms ease-in-out;
+
+      img {
+        height: 100%;
+        filter: invert(82%) sepia(45%) saturate(436%) hue-rotate(94deg) brightness(101%) contrast(99%);
+      }
     }
+  }
+
+  @keyframes float {
+    0% { transform: translate(0%, 0%); }
+    50% { transform: translate(0%, 5%); }
+    100% { transform: translate(0%, 0%); }
   }
 
   /* GENERAL STYLES */
