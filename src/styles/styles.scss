@@ -22,13 +22,40 @@
   
   .Nav {
     position: fixed;
-    right: 0;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 100vw;
     z-index: 100;
+
+    .compass-container {
+      position: absolute;
+      top: 1vh;
+      left: 1vw;
+      height: 9vh;
+      width: 9vh;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+        width: 100%;
+        filter: invert(97%) sepia(78%) saturate(1339%) hue-rotate(189deg) brightness(107%) contrast(103%) drop-shadow(0 0 1vmin #d2357b);
+      }
+    }
+
+    .link-container {
+      width: 90vw;
+      display: flex;
+      margin-left: 10vh;
+      justify-content: space-around;
+
+      .link {
+        opacity: 0;
+      }
+
+      .open {
+        opacity: 1;
+      }
+    }
 
     .link {
       height: 8vh;
@@ -40,10 +67,8 @@
       justify-content: center;
       align-items: center;
       margin: 1vh;
-    }
-
-    .link:hover {
       cursor: pointer;
+      transition: all 300ms ease-in-out;
     }
   }
 
@@ -57,11 +82,11 @@
   
   a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
   
   a:visited {
-    color: black;
+    color: white;
   }
   
   .arrow-down {
@@ -99,72 +124,73 @@
     
     .wrapper {
       position: absolute;
-      top: 40%;
-      left: 50%;
-      width: 85vmin;
-      height: 26vmin;
-      transform: translate(-50%, -50%);
-    }
-
-    .border {
-      border: 1vmin solid var(--light-off);
-    }
-
-    .top-border {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      border-bottom: none !important;
-      border-radius: 5vmin;
-      // box-shadow: 0 -.5vmin 2vmin #516ace;
-    }
-
-    .left-border {
-      position: absolute;
-      top: 0;
-      right: calc(30% + 15vmin);
-      left: 0;
-      bottom: 0;
-      border-right: none !important;
-      border-top-left-radius: 5vmin;
-      border-bottom-left-radius: 5vmin;
-      // box-shadow: -.6vmin .5vmin .5vmin #516ace;
-    }
-
-    .right-border {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: calc(70% + 15vmin);
-      bottom: 0;
-      border-left: none !important;
-      border-top-right-radius: 5vmin;
-      border-bottom-right-radius: 5vmin;
-      // box-shadow: 1vmin 1vmin 2vmin 0 #516ace;
-    }
-
-    .text {
-      font-family: 'Sacramento', cursive;
-      text-align: center;
+      width: 50vmin;
+      height: 50vmin;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1vmin solid #4d4dff;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 15vmin;
+      box-shadow: 0 0 100px .5vmin #4d4dff, 0 0 100px .5vmin #4d4dff inset;
+    }
+
+    .ring {
+      box-sizing: border-box;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      box-shadow: -.6vmin .6vmin .6vmin rgba(255, 255, 0, .6), .6vmin .6vmin .6vmin rgba(255, 255, 0, .6);
+      animation: blinkRings 3s infinite;
+    }
+
+
+    @keyframes blinkRings {
+      49% { box-shadow: -.6vmin .6vmin .6vmin rgba(255, 255, 0, .7), .6vmin .6vmin .6vmin rgba(255, 255, 0, .7) }
+      50% { box-shadow: none }
+      52% { box-shadow: none}
+      53% { box-shadow: -.6vmin .6vmin .6vmin rgba(255, 255, 0, .7), .6vmin .6vmin .6vmin rgba(255, 255, 0, .7) }
+      55% { box-shadow: -.6vmin .6vmin .6vmin rgba(255, 255, 0, .7), .6vmin .6vmin .6vmin rgba(255, 255, 0, .7) }
+      56% { box-shadow: none}
+      58% { box-shadow: none }
+      59% { box-shadow: -.6vmin .6vmin .6vmin rgba(255, 255, 0, .7), .6vmin .6vmin .6vmin rgba(255, 255, 0, .7)}
+    }
+
+
+    .ring-1 {
+      width: 100vmin;
+      height: 22vmin;
+      transform: translate(-50%, -50%) rotate(-20deg);
+    }
+
+    .ring-2 {
+      width: 90vmin;
+      height: 18vmin;
+      transform: translate(-50%, -50%) rotate(-20deg);
+    }
+
+    .text {
+      font-family: 'Sacramento', cursive;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%) rotate(-15deg);
+      font-size: 14vmin;
       color: var(--light-off);
       box-sizing: border-box;
-      white-space: nowrap;
+      line-height: 1em;
     }
 
     .job {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       text-align: center;
       position: absolute;
-      bottom: -2vmin;
-      left: 70%;
-      transform: translate(-50%, 0%);
+      bottom: 5vmin;
+      left: 80%;
+      transform: translate(-50%, -50%);
       font-size: 4vmin;
       color: var(--light-off);
       box-sizing: border-box;
@@ -357,7 +383,6 @@
     flex-direction: row;
     justify-content: center;
     color: white;
-    box-shadow: 0 0 2px white;
     position: absolute;
     top: 50%;
     left: 100%;
@@ -425,7 +450,7 @@
     display: grid;
     box-sizing: border-box;
     color: white;
-    padding-top: 9vh;
+    padding: 9vh 2vw; 
   }
 
   #project-1, #project-3 {
@@ -518,8 +543,9 @@
   }
   
   .button {
-    border: 3px solid var(--red);
-    color: var(--red);
+    border: 3px solid #fdfdfd;
+    box-shadow: 0 0 2vmin .4vmin #c90819, 0 0 2vmin .4vmin #c90819 inset;
+    color: #fdfdfd;
     box-sizing: border-box;
     border-radius: 5px;
     height: 5vh;
@@ -534,9 +560,7 @@
   }
   
   .button:hover {
-    background-color: var(--gold);
-    background-color: var(--red);
-    color: white;
+    box-shadow: 0 0 3vmin .8vmin #c90819, 0 0 3vmin .8vmin #c90819 inset;
   }
   
   /* CONTACT VIEW */
@@ -546,12 +570,15 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
-    height: calc(100vh-10px);
     padding: 10vh 0 20vh 0;
     align-items: center;
+    color: white;
+    box-sizing: border-box;
   }
   
   .Contact .title h2 {
@@ -561,11 +588,12 @@
   
   .Contact .button {
     justify-content: space-around;
-    width: 200px;
+    width: 250px;
+    margin: auto;
   }
   
   .Contact .button {
-    font-size: 2vh;
+    font-size: 2vmin;
   }
   
   .contacts {
@@ -590,15 +618,21 @@
     .project {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      border: 10px solid red;
       padding-top: 2vh;
+    }
+
+    .project-information {
+      margin: 5vh auto 5vh auto !important;
     }
   
     .image-container {
       height: 50vh;
       width: 80vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #project-2 .image-container {
@@ -624,7 +658,7 @@
     }
   
     .project .image-container img {
-      // margin: auto;
+      margin: unset !important;
       max-height: 100%;
       max-width: 100%;
     }

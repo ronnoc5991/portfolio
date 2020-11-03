@@ -36,12 +36,6 @@ function About() {
                 </div>
               </div>
 
-              <div className="arrow-down">
-                  <a href="#contact">
-                      <i className="fa fa-chevron-down fa-2x"></i>
-                  </a>
-              </div>
-
     </div>
   );
 }

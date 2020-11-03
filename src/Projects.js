@@ -1,9 +1,6 @@
 import React from 'react'
 import EatstagramHome from './EatstagramCropped.jpg'
-import EatstagramExplore from './eatstagram-explore.JPG'
-import BorrelHome from './borrel-beter-home.JPG'
 import BorrelPlank from './plank-screenshot.JPG'
-import BorrelCustom from './custom-plank.JPG'
 import Battleship from './battleship-gameplay.JPG'
 
 
@@ -35,15 +32,8 @@ const Projects = () => {
 
                     </div>
 
-
                     <div className="image-container">
                         <img id="eatstagram-1" src={ EatstagramHome } alt=""/>
-                    </div>
-
-                    <div className="arrow-down">
-                        <a href="#project-2">
-                            <i className="fa fa-chevron-down fa-2x"></i>
-                        </a>
                     </div>
 
                 </div>
@@ -51,7 +41,7 @@ const Projects = () => {
                 <div className="project" id="project-2">
 
                     <div className="image-container">
-                        <img src={ BorrelHome } alt=""/>
+                        <img src={ BorrelPlank } alt=""/>
                     </div>
 
                     <div className="project-information">
@@ -71,12 +61,6 @@ const Projects = () => {
                                 <div className="button">CODE</div>
                             </a>
                         </div>
-                    </div>
-
-                    <div className="arrow-down">
-                        <a href="#project-3">
-                            <i className="fa fa-chevron-down fa-2x"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -105,12 +89,6 @@ const Projects = () => {
 
                     <div className="image-container">
                         <img src={ Battleship } alt=""/>
-                    </div>
-
-                    <div className="arrow-down">
-                        <a href="#about">
-                            <i className="fa fa-chevron-down fa-2x"></i>
-                        </a>
                     </div>
                     
                 </div>
