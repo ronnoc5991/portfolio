@@ -30,22 +30,22 @@ function Nav() {
                 <div className={`home-link link ${open ? 'open' : ''}`} onClick={ () => navigate('.Title') } >
                     <img src={ UFO } alt=""/>
                     <div className="light-beam"></div>
-                    <div className="link-name">HOME</div>
+                    <div className="link-name">Home</div>
                 </div>
                 <div className={`portfolio-link link ${ open ? 'open' : '' }`} onClick={ () => navigate('.Projects') } >
                     <img src={ UFO } alt=""/>
                     <div className="light-beam"></div>
-                    <div className="link-name">PORTFOLIO</div>
+                    <div className="link-name">Work</div>
                 </div>
                 <div className={`about-link link ${ open ? 'open' : '' }`} onClick={ () => navigate('.About') } >
                     <img src={ UFO } alt=""/>
                     <div className="light-beam"></div>
-                    <div className="link-name">ABOUT</div>
+                    <div className="link-name">About</div>
                 </div>
                 <div className={`contact-link link ${ open ? 'open' : '' }`} onClick={ () => navigate('.Contact') } >
                     <img src={ UFO } alt=""/>
                     <div className="light-beam"></div>
-                    <div className="link-name">CONTACT</div>
+                    <div className="link-name">Contact</div>
                 </div>
             </div>
         </div>
