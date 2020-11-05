@@ -11,7 +11,7 @@ import Nederland from './netherlands.png'
 
 function About() {
 
-  const [openStatus, setOpenStatus] = useState([true, false, false]);
+  const [openStatus, setOpenStatus] = useState([true, false]);
 
   //system that displays one of four different divs based on state
   //intro
@@ -20,7 +20,7 @@ function About() {
   //hobbies
 
   function handleClick (section) {
-    let newStatus = [false, false, false];
+    let newStatus = [false, false];
     newStatus[section] = true;
     setOpenStatus(newStatus);
   }
@@ -47,9 +47,6 @@ function About() {
             Skills
           </div>
 
-          <div className="hobbies-link about-links" onClick={ () => handleClick(2) }>
-            Hobbies
-          </div>
         </div>
 
         <div className={`about-section bio ${openStatus[0] ? 'open-section': ''}`}>
@@ -83,21 +80,6 @@ function About() {
             I usually work with: <br/><br/> HTML, CSS/SCSS, Javascript/TypeScript, ReactJS, Git, Github 
           </p>
         </div>
-
-        <div className={`about-section hobbies ${openStatus[2] ? 'open-section': ''}`}>
-          <p>
-            Outside of Web Development, I enjoy hiking, camping, travelling and cooking.
-          </p>
-          <div className="hobbies-container">
-            <img src={ Tent } alt=""/>
-            <img src={ Mountains } alt=""/>
-            <img src={ Chef } alt=""/>
-            <img src={ Backpack } alt=""/>
-          </div>
-        
-        </div>
-
-
 
     </div>
   );

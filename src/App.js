@@ -5,6 +5,7 @@ import Title from './Title'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
+import Compass from './compass.png'
 
 function App() {
   
@@ -12,8 +13,16 @@ function App() {
     gsap.to(window, { duration: .2, scrollTo: '.Title'}); //eslint-disable-line
   }, [])
 
+  function navigate (destination) {
+    gsap.to(window, {duration: 2, scrollTo: `${destination}`}); //eslint-disable-line
+  }
+
   return (
     <div className="App">
+
+      <div className="compass-container" onClick={ () => navigate('.Nav') }>
+        <img src={ Compass } alt=""/>
+      </div>
 
       <Nav />
 
