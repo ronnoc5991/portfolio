@@ -9,16 +9,24 @@ function Nav() {
     return (
         <div className="Nav">
             <div className="link" onClick={ () => navigate('.Title') } >
-                <div className="link-name">Home</div>
+                <div className="link-name">
+                    HOME
+                </div>
             </div>
             <div className="link" onClick={ () => navigate('.Projects') } >
-                <div className="link-name">Portfolio</div>
+                <div className="link-name">
+                    PORTFOLIO
+                </div>
             </div>
             <div className="link" onClick={ () => navigate('.About') } >
-                <div className="link-name">About</div>
+                <div className="link-name">
+                    ABOUT
+                </div>
             </div>
             <div className="link" onClick={ () => navigate('.Contact') } >
-                <div className="link-name">Contact</div>
+                <div className="link-name">
+                    CONTACT
+                </div>
             </div>
         </div>
     )
