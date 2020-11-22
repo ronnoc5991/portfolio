@@ -15,17 +15,17 @@ function Contact() {
             </a>
 
             <div className="contacts">
-                <a href="https://linkedin.com/in/connorstreng" target="_blank">
+                <a href="https://linkedin.com/in/connorstreng" target="_blank" rel="noopener noreferrer">
                     <p>LINKED-IN</p>
                 </a>
                 <div className="vertical-line"></div>
                 <p>(+31) 640 309 602</p>
                 <div className="vertical-line"></div>
-                <a href="https://github.com/ronnoc5991" target="_blank">
+                <a href="https://github.com/ronnoc5991" target="_blank" rel="noopener noreferrer">
                     <p>GITHUB</p>
                 </a>
                 <div className="vertical-line"></div>
-                <a href="https://codepen.io/ronnoc5991" target="_blank">
+                <a href="https://codepen.io/ronnoc5991" target="_blank" rel="noopener noreferrer">
                     <p>CODEPEN</p>
                 </a>
             </div>

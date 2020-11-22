@@ -22,10 +22,10 @@ const Projects = () => {
                         </div>
 
                         <div className="button-container">
-                            <a href="https://ronnoc5991.github.io/eatstagram/" target="_blank">
+                            <a href="https://ronnoc5991.github.io/eatstagram/" target="_blank" rel="noopener noreferrer">
                                 <div className="button">PROJECT</div>
                             </a>
-                            <a href="https://github.com/ronnoc5991/eatstagram" target="_blank">
+                            <a href="https://github.com/ronnoc5991/eatstagram" target="_blank" rel="noopener noreferrer">
                                 <div className="button">CODE</div>
                             </a>
                         </div>
@@ -54,10 +54,10 @@ const Projects = () => {
                             </p>
                         </div>
                         <div className="button-container">
-                            <a href="https://ronnoc5991.github.io/borrel-beter/" target="_blank">
+                            <a href="https://ronnoc5991.github.io/borrel-beter/" target="_blank" rel="noopener noreferrer">
                                 <div className="button">PROJECT</div>
                             </a>
-                            <a href="https://github.com/ronnoc5991/borrel-beter" target="_blank">
+                            <a href="https://github.com/ronnoc5991/borrel-beter" target="_blank" rel="noopener noreferrer">
                                 <div className="button">CODE</div>
                             </a>
                         </div>
@@ -76,10 +76,10 @@ const Projects = () => {
                         </div>
 
                         <div className="button-container">
-                            <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank">
+                            <a href="https://ronnoc5991.github.io/battleship-react/" target="_blank" rel="noopener noreferrer">
                                 <div className="button">PROJECT</div>
                             </a>
-                            <a href="https://github.com/ronnoc5991/battleship-react" target="_blank">
+                            <a href="https://github.com/ronnoc5991/battleship-react" target="_blank" rel="noopener noreferrer">
                                 <div className="button">CODE</div>
                             </a>
                         </div>
