@@ -8,7 +8,12 @@ import Contact from './Contact'
 import Compass from './compass.png'
 
 function App() {
-  
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 500)
+  })
 
   useEffect(() => {
     gsap.to(window, { duration: .2, scrollTo: '.Title'}); //eslint-disable-line
@@ -24,8 +29,6 @@ function App() {
       <div className="compass-container" onClick={ () => navigate('.Nav') }>
         <img src={ Compass } alt=""/>
       </div>
-
-      {/* <div className="background" ref={ el => backgroundContainer = el }></div> */}
 
       <Nav />
 

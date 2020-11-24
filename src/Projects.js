@@ -16,7 +16,7 @@ const Projects = () => {
                             <h4>Eatstagram</h4>
                             <hr/>
                             <p>
-                                A fun personal project where I keep and share recipes.  Users can perform CRUD operations.
+                                A fun personal project where I keep and share recipes.  Users can create and view recipes.
                                 Frontend built with React.  Backend lives on Firebase.
                             </p>
                         </div>
