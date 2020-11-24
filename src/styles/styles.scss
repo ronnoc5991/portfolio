@@ -121,13 +121,13 @@
     
     .wrapper {
       position: absolute;
-      width: 45vmin;
-      height: 45vmin;
+      width: 50vmin;
+      height: 50vmin;
       border-radius: 50%;
       box-sizing: border-box;
       border: .8vmin solid #4d4dff;
       position: absolute;
-      top: 40%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -60%);
       box-shadow: 0 0 80px .5vmin #4d4dff, 0 0 80px .5vmin #4d4dff inset;
@@ -157,14 +157,14 @@
     }
 
     .ring-1 {
-      width: 90vmin;
-      height: 19.8vmin;
+      width: 100vmin;
+      height: 22vmin;
       transform: translate(-50%, -50%) rotate(-20deg);
     }
 
     .ring-2 {
-      width: 81vmin;
-      height: 16.2vmin;
+      width: 90vmin;
+      height: 18vmin;
       transform: translate(-50%, -50%) rotate(-20deg);
     }
 
@@ -174,7 +174,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -60%) rotate(-20deg);
-      font-size: 12.6vmin;
+      font-size: 14vmin;
       color: transparent;
       box-sizing: border-box;
       line-height: 1em;

@@ -3,8 +3,8 @@ import React, { useRef, useEffect } from 'react'
 function Title() {
     
     let text = useRef(null); 
-    let astronaut = useRef(null);
-    let bubble = useRef(null);
+    // let astronaut = useRef(null);
+    // let bubble = useRef(null);
 
     useEffect(() => {
         const tl = gsap.timeline(); //eslint-disable-line
@@ -19,12 +19,12 @@ function Title() {
         
         tl.to(text, {color: "var(--light-on)", textShadow: "0 -5vh 10vh, 0 0 5px, 0 0 1em #516ace, 0 0 0.5em #516ace, 0 0 0.1em #516ace, 0 10px 3px #000", duration: .01, delay: .2});
 
-        tl.to(astronaut, {y: 0, duration: 5, delay: '-2'});
+        // tl.to(astronaut, {y: 0, duration: 5, delay: '-2'});
 
-        setTimeout(() => {
-            astronaut.classList.add('animate-astro');
-            gsap.to(bubble, {opacity: 1, duration: .1}) //eslint-disable-line
-        }, 5300)
+        // setTimeout(() => {
+        //     astronaut.classList.add('animate-astro');
+        //     gsap.to(bubble, {opacity: 1, duration: .1}) //eslint-disable-line
+        // }, 5300)
     }, [])
 
     return (
@@ -40,7 +40,7 @@ function Title() {
 
             </div>
 
-            <div class="astro-container" ref={ el => astronaut = el }>
+            {/* <div class="astro-container" ref={ el => astronaut = el }>
                 <div id="talkbubble" ref={ el => bubble = el }>
                     <p>I'm a Frontend Developer!</p>
                 </div>
@@ -72,7 +72,7 @@ function Title() {
                     <div class="leg left-leg"></div>
                     <div class="leg right-leg"></div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )

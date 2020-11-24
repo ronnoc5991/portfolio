@@ -30,7 +30,7 @@ function About() {
             I enjoy traveling, hiking, camping, cooking and learning.
           </p>
           <p>
-            I enjoy creating fun, beautiful UI's and I am always looking for ways to improve as a developer.
+            I enjoy creating fun, beautiful UI's and I am always looking for ways to grow as a developer.
           </p>
         </div>
 
